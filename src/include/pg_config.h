@@ -86,7 +86,7 @@
 /* #undef HAVE_APPEND_HISTORY */
 
 /* Define to 1 if you have the `ASN1_STRING_get0_data' function. */
-/* #undef HAVE_ASN1_STRING_GET0_DATA */
+#define HAVE_ASN1_STRING_GET0_DATA 1
 
 /* Define to 1 if you want to use atomics if available. */
 #define HAVE_ATOMICS 1
@@ -95,10 +95,10 @@
 /* #undef HAVE_ATOMIC_H */
 
 /* Define to 1 if you have the `BIO_get_data' function. */
-/* #undef HAVE_BIO_GET_DATA */
+#define HAVE_BIO_GET_DATA 1
 
 /* Define to 1 if you have the `BIO_meth_new' function. */
-/* #undef HAVE_BIO_METH_NEW */
+#define HAVE_BIO_METH_NEW 1
 
 /* Define to 1 if you have the `cbrt' function. */
 #define HAVE_CBRT 1
@@ -119,7 +119,7 @@
 #define HAVE_CRYPT 1
 
 /* Define to 1 if you have the `CRYPTO_lock' function. */
-#define HAVE_CRYPTO_LOCK 1
+#undef HAVE_CRYPTO_LOCK
 
 /* Define to 1 if you have the <crypt.h> header file. */
 /* #undef HAVE_CRYPT_H */
@@ -377,7 +377,7 @@
 #define HAVE_NET_IF_H 1
 
 /* Define to 1 if you have the `OPENSSL_init_ssl' function. */
-/* #undef HAVE_OPENSSL_INIT_SSL */
+#define HAVE_OPENSSL_INIT_SSL 1
 
 /* Define to 1 if you have the <ossp/uuid.h> header file. */
 /* #undef HAVE_OSSP_UUID_H */
@@ -733,7 +733,7 @@
 #define PACKAGE_VERSION "10.0"
 
 /* Define to the name of a signed 128-bit integer type. */
-#define PG_INT128_TYPE __int128
+#undef PG_INT128_TYPE
 
 /* Define to the name of a signed 64-bit integer type. */
 #define PG_INT64_TYPE long int

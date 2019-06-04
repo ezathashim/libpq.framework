@@ -7,24 +7,46 @@
 	objects = {
 
 /* Begin PBXAggregateTarget section */
-		4B4C4CDE150423F100840750 /* Framework */ = {
+		4B4C4CDE150423F100840750 /* Framework_iOS */ = {
 			isa = PBXAggregateTarget;
-			buildConfigurationList = 4B4C4CDF150423F100840750 /* Build configuration list for PBXAggregateTarget "Framework" */;
+			buildConfigurationList = 4B4C4CDF150423F100840750 /* Build configuration list for PBXAggregateTarget "Framework_iOS" */;
 			buildPhases = (
 				4B4C4CE4150423FF00840750 /* Build Framework */,
 			);
 			dependencies = (
 				4B4C4CE3150423FC00840750 /* PBXTargetDependency */,
 			);
-			name = Framework;
+			name = Framework_iOS;
+			productName = Framework;
+		};
+		AE933D4122A69C0500CD8C59 /* Framework_tvOS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AE933D4522A69C0500CD8C59 /* Build configuration list for PBXAggregateTarget "Framework_tvOS" */;
+			buildPhases = (
+				AE933D4422A69C0500CD8C59 /* Build Framework */,
+			);
+			dependencies = (
+				AE933D4222A69C0500CD8C59 /* PBXTargetDependency */,
+			);
+			name = Framework_tvOS;
+			productName = Framework;
+		};
+		AECF223522A613500002C0EB /* Framework_watchOS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AECF223922A613500002C0EB /* Build configuration list for PBXAggregateTarget "Framework_watchOS" */;
+			buildPhases = (
+				AECF223822A613500002C0EB /* Build Framework */,
+			);
+			dependencies = (
+				AECF223D22A613C00002C0EB /* PBXTargetDependency */,
+			);
+			name = Framework_watchOS;
 			productName = Framework;
 		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
 		4B4C4CB515040B7500840750 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B4C4CB415040B7500840750 /* Foundation.framework */; };
-		4B4C4E0C1504295600840750 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B4C4E0A1504295600840750 /* libcrypto.a */; };
-		4B4C4E0D1504295600840750 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B4C4E0B1504295600840750 /* libssl.a */; };
 		4B5894F117EF99B90039A02A /* pg_config_ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B5894F017EF99B90039A02A /* pg_config_ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4B91EF2716F2110F00CC836E /* libpq-fe.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BBB04E316A91EE500CEE2AE /* libpq-fe.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		4BA7590F17F043F100C26AD6 /* pqcomm.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BA7590E17F043F100C26AD6 /* pqcomm.h */; };
@@ -164,6 +186,428 @@
 		4BE9310115057FE60021F063 /* postgres_fe.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930D315057FE60021F063 /* postgres_fe.h */; };
 		4BE9311E15057FE60021F063 /* libpq-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930F215057FE60021F063 /* libpq-Prefix.pch */; };
 		4BE9311F15057FE60021F063 /* pg_config_paths.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930F415057FE60021F063 /* pg_config_paths.h */; };
+		AE933C1622A6975100CD8C59 /* openssl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECF219722A5EFA60002C0EB /* openssl.framework */; };
+		AE933C1922A69B2100CD8C59 /* pgstrcasecmp.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709A21FA624BF006B591F /* pgstrcasecmp.c */; };
+		AE933C1A22A69B2100CD8C59 /* thread.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709A01FA624BF006B591F /* thread.c */; };
+		AE933C1B22A69B2100CD8C59 /* noblock.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709A11FA624BF006B591F /* noblock.c */; };
+		AE933C1C22A69B2100CD8C59 /* fe-auth.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04D516A91EE500CEE2AE /* fe-auth.c */; };
+		AE933C1D22A69B2100CD8C59 /* encnames.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709971FA622DD006B591F /* encnames.c */; };
+		AE933C1E22A69B2100CD8C59 /* erand48.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC7099D1FA623A5006B591F /* erand48.c */; };
+		AE933C1F22A69B2100CD8C59 /* fe-connect.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04D716A91EE500CEE2AE /* fe-connect.c */; };
+		AE933C2022A69B2100CD8C59 /* fe-exec.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04D816A91EE500CEE2AE /* fe-exec.c */; };
+		AE933C2122A69B2100CD8C59 /* pg_strong_random.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC7099B1FA62376006B591F /* pg_strong_random.c */; };
+		AE933C2222A69B2100CD8C59 /* wchar.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709981FA622DD006B591F /* wchar.c */; };
+		AE933C2322A69B2100CD8C59 /* sha2_openssl.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709B71FA63E37006B591F /* sha2_openssl.c */; };
+		AE933C2422A69B2100CD8C59 /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709AD1FA6255A006B591F /* base64.c */; };
+		AE933C2522A69B2100CD8C59 /* fe-lobj.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04D916A91EE500CEE2AE /* fe-lobj.c */; };
+		AE933C2622A69B2100CD8C59 /* unicode_norm.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709AE1FA6255B006B591F /* unicode_norm.c */; };
+		AE933C2722A69B2100CD8C59 /* scram-common.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709AC1FA6255A006B591F /* scram-common.c */; };
+		AE933C2822A69B2100CD8C59 /* fe-misc.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04DA16A91EE500CEE2AE /* fe-misc.c */; };
+		AE933C2922A69B2100CD8C59 /* fe-print.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04DB16A91EE500CEE2AE /* fe-print.c */; };
+		AE933C2A22A69B2100CD8C59 /* fe-protocol2.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04DC16A91EE500CEE2AE /* fe-protocol2.c */; };
+		AE933C2B22A69B2100CD8C59 /* fe-protocol3.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04DD16A91EE500CEE2AE /* fe-protocol3.c */; };
+		AE933C2C22A69B2100CD8C59 /* fe-secure.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04DE16A91EE500CEE2AE /* fe-secure.c */; };
+		AE933C2D22A69B2100CD8C59 /* pqsignal.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709A41FA624BF006B591F /* pqsignal.c */; };
+		AE933C2E22A69B2100CD8C59 /* fe_memutils.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BB6232317EF963300920783 /* fe_memutils.c */; };
+		AE933C2F22A69B2100CD8C59 /* ip.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709AB1FA6255A006B591F /* ip.c */; };
+		AE933C3022A69B2100CD8C59 /* fe-secure-openssl.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7E2EA1DF2E6EC00715BB6 /* fe-secure-openssl.c */; };
+		AE933C3122A69B2100CD8C59 /* chklocale.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC7099F1FA624BE006B591F /* chklocale.c */; };
+		AE933C3222A69B2100CD8C59 /* libpq-events.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04E116A91EE500CEE2AE /* libpq-events.c */; };
+		AE933C3322A69B2100CD8C59 /* saslprep.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709B01FA6255B006B591F /* saslprep.c */; };
+		AE933C3422A69B2100CD8C59 /* pqexpbuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04E816A91EE500CEE2AE /* pqexpbuffer.c */; };
+		AE933C3522A69B2100CD8C59 /* md5.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709AF1FA6255B006B591F /* md5.c */; };
+		AE933C3622A69B2100CD8C59 /* inet_net_ntop.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709A31FA624BF006B591F /* inet_net_ntop.c */; };
+		AE933C3722A69B2100CD8C59 /* fe-auth-scram.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709911FA62008006B591F /* fe-auth-scram.c */; };
+		AE933C3822A69B2100CD8C59 /* snprintf.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709B91FA63E85006B591F /* snprintf.c */; };
+		AE933C3A22A69B2100CD8C59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B4C4CB415040B7500840750 /* Foundation.framework */; };
+		AE933C3D22A69B2100CD8C59 /* postgres_ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930D215057FE60021F063 /* postgres_ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE933C3E22A69B2100CD8C59 /* libpq-events.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BBB04E216A91EE500CEE2AE /* libpq-events.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE933C3F22A69B2100CD8C59 /* libpq-fe.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BBB04E316A91EE500CEE2AE /* libpq-fe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE933C4022A69B2100CD8C59 /* pg_config_ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B5894F017EF99B90039A02A /* pg_config_ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE933C4122A69B2100CD8C59 /* c.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930C515057FE60021F063 /* c.h */; };
+		AE933C4222A69B2100CD8C59 /* getaddrinfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930C615057FE60021F063 /* getaddrinfo.h */; };
+		AE933C4322A69B2100CD8C59 /* libpq-fs.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930C915057FE60021F063 /* libpq-fs.h */; };
+		AE933C4422A69B2100CD8C59 /* md5.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930CA15057FE60021F063 /* md5.h */; };
+		AE933C4522A69B2100CD8C59 /* pg_wchar.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930CD15057FE60021F063 /* pg_wchar.h */; };
+		AE933C4622A69B2100CD8C59 /* pg_config.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930CE15057FE60021F063 /* pg_config.h */; };
+		AE933C4722A69B2100CD8C59 /* pg_config_manual.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930CF15057FE60021F063 /* pg_config_manual.h */; };
+		AE933C4822A69B2100CD8C59 /* pg_config_os.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930D015057FE60021F063 /* pg_config_os.h */; };
+		AE933C4922A69B2100CD8C59 /* port.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930D115057FE60021F063 /* port.h */; };
+		AE933C4A22A69B2100CD8C59 /* unicode_norm_table.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC709C11FA63F86006B591F /* unicode_norm_table.h */; };
+		AE933C4B22A69B2100CD8C59 /* postgres_fe.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930D315057FE60021F063 /* postgres_fe.h */; };
+		AE933C4C22A69B2100CD8C59 /* libpq-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930F215057FE60021F063 /* libpq-Prefix.pch */; };
+		AE933C4D22A69B2100CD8C59 /* pg_config_paths.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930F415057FE60021F063 /* pg_config_paths.h */; };
+		AE933C4E22A69B2100CD8C59 /* aes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E96F15058F8D00D47056 /* aes.h */; };
+		AE933C4F22A69B2100CD8C59 /* asn1.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97015058F8D00D47056 /* asn1.h */; };
+		AE933C5022A69B2100CD8C59 /* asn1_mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97115058F8D00D47056 /* asn1_mac.h */; };
+		AE933C5122A69B2100CD8C59 /* asn1t.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97215058F8D00D47056 /* asn1t.h */; };
+		AE933C5222A69B2100CD8C59 /* bio.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97315058F8D00D47056 /* bio.h */; };
+		AE933C5322A69B2100CD8C59 /* blowfish.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97415058F8D00D47056 /* blowfish.h */; };
+		AE933C5422A69B2100CD8C59 /* bn.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97515058F8D00D47056 /* bn.h */; };
+		AE933C5522A69B2100CD8C59 /* buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97615058F8D00D47056 /* buffer.h */; };
+		AE933C5622A69B2100CD8C59 /* camellia.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97715058F8D00D47056 /* camellia.h */; };
+		AE933C5722A69B2100CD8C59 /* cast.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97815058F8D00D47056 /* cast.h */; };
+		AE933C5822A69B2100CD8C59 /* cmac.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97915058F8D00D47056 /* cmac.h */; };
+		AE933C5922A69B2100CD8C59 /* sha2.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC709BD1FA63F4D006B591F /* sha2.h */; };
+		AE933C5A22A69B2100CD8C59 /* cms.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97A15058F8D00D47056 /* cms.h */; };
+		AE933C5B22A69B2100CD8C59 /* comp.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97B15058F8D00D47056 /* comp.h */; };
+		AE933C5C22A69B2100CD8C59 /* conf.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97C15058F8D00D47056 /* conf.h */; };
+		AE933C5D22A69B2100CD8C59 /* conf_api.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97D15058F8D00D47056 /* conf_api.h */; };
+		AE933C5E22A69B2100CD8C59 /* crypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97E15058F8D00D47056 /* crypto.h */; };
+		AE933C5F22A69B2100CD8C59 /* des.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97F15058F8D00D47056 /* des.h */; };
+		AE933C6022A69B2100CD8C59 /* des_old.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98015058F8D00D47056 /* des_old.h */; };
+		AE933C6122A69B2100CD8C59 /* dh.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98115058F8D00D47056 /* dh.h */; };
+		AE933C6222A69B2100CD8C59 /* dsa.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98215058F8D00D47056 /* dsa.h */; };
+		AE933C6322A69B2100CD8C59 /* dso.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98315058F8D00D47056 /* dso.h */; };
+		AE933C6422A69B2100CD8C59 /* dtls1.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98415058F8D00D47056 /* dtls1.h */; };
+		AE933C6522A69B2100CD8C59 /* e_os2.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98515058F8D00D47056 /* e_os2.h */; };
+		AE933C6622A69B2100CD8C59 /* ebcdic.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98615058F8D00D47056 /* ebcdic.h */; };
+		AE933C6722A69B2100CD8C59 /* ec.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98715058F8D00D47056 /* ec.h */; };
+		AE933C6822A69B2100CD8C59 /* ecdh.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98815058F8D00D47056 /* ecdh.h */; };
+		AE933C6922A69B2100CD8C59 /* ecdsa.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98915058F8D00D47056 /* ecdsa.h */; };
+		AE933C6A22A69B2100CD8C59 /* engine.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98A15058F8D00D47056 /* engine.h */; };
+		AE933C6B22A69B2100CD8C59 /* err.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98B15058F8D00D47056 /* err.h */; };
+		AE933C6C22A69B2100CD8C59 /* evp.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98C15058F8D00D47056 /* evp.h */; };
+		AE933C6D22A69B2100CD8C59 /* hmac.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98D15058F8D00D47056 /* hmac.h */; };
+		AE933C6E22A69B2100CD8C59 /* idea.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98E15058F8D00D47056 /* idea.h */; };
+		AE933C6F22A69B2100CD8C59 /* unicode_norm.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC709BF1FA63F74006B591F /* unicode_norm.h */; };
+		AE933C7022A69B2100CD8C59 /* krb5_asn.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98F15058F8D00D47056 /* krb5_asn.h */; };
+		AE933C7122A69B2100CD8C59 /* kssl.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99015058F8D00D47056 /* kssl.h */; };
+		AE933C7222A69B2100CD8C59 /* lhash.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99115058F8D00D47056 /* lhash.h */; };
+		AE933C7322A69B2100CD8C59 /* md4.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99215058F8D00D47056 /* md4.h */; };
+		AE933C7422A69B2100CD8C59 /* md5.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99315058F8D00D47056 /* md5.h */; };
+		AE933C7522A69B2100CD8C59 /* mdc2.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99415058F8D00D47056 /* mdc2.h */; };
+		AE933C7622A69B2100CD8C59 /* modes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99515058F8D00D47056 /* modes.h */; };
+		AE933C7722A69B2100CD8C59 /* obj_mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99615058F8D00D47056 /* obj_mac.h */; };
+		AE933C7822A69B2100CD8C59 /* objects.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99715058F8D00D47056 /* objects.h */; };
+		AE933C7922A69B2100CD8C59 /* ocsp.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99815058F8D00D47056 /* ocsp.h */; };
+		AE933C7A22A69B2100CD8C59 /* opensslconf.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99915058F8D00D47056 /* opensslconf.h */; };
+		AE933C7B22A69B2100CD8C59 /* opensslv.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99A15058F8D00D47056 /* opensslv.h */; };
+		AE933C7C22A69B2100CD8C59 /* ossl_typ.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99B15058F8D00D47056 /* ossl_typ.h */; };
+		AE933C7D22A69B2100CD8C59 /* pem.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99C15058F8D00D47056 /* pem.h */; };
+		AE933C7E22A69B2100CD8C59 /* pem2.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99D15058F8D00D47056 /* pem2.h */; };
+		AE933C7F22A69B2100CD8C59 /* pqcomm.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BA7590E17F043F100C26AD6 /* pqcomm.h */; };
+		AE933C8022A69B2100CD8C59 /* pkcs12.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99E15058F8D00D47056 /* pkcs12.h */; };
+		AE933C8122A69B2100CD8C59 /* pkcs7.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99F15058F8D00D47056 /* pkcs7.h */; };
+		AE933C8222A69B2100CD8C59 /* pqueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A015058F8D00D47056 /* pqueue.h */; };
+		AE933C8322A69B2100CD8C59 /* rand.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A115058F8D00D47056 /* rand.h */; };
+		AE933C8422A69B2100CD8C59 /* rc2.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A215058F8D00D47056 /* rc2.h */; };
+		AE933C8522A69B2100CD8C59 /* rc4.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A315058F8D00D47056 /* rc4.h */; };
+		AE933C8622A69B2100CD8C59 /* ripemd.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A415058F8D00D47056 /* ripemd.h */; };
+		AE933C8722A69B2100CD8C59 /* rsa.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A515058F8D00D47056 /* rsa.h */; };
+		AE933C8822A69B2100CD8C59 /* safestack.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A615058F8D00D47056 /* safestack.h */; };
+		AE933C8922A69B2100CD8C59 /* scram.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC709C51FA64033006B591F /* scram.h */; };
+		AE933C8A22A69B2100CD8C59 /* seed.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A715058F8D00D47056 /* seed.h */; };
+		AE933C8B22A69B2100CD8C59 /* sha.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A815058F8D00D47056 /* sha.h */; };
+		AE933C8C22A69B2100CD8C59 /* srp.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A915058F8D00D47056 /* srp.h */; };
+		AE933C8D22A69B2100CD8C59 /* srtp.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9AA15058F8D00D47056 /* srtp.h */; };
+		AE933C8E22A69B2100CD8C59 /* ssl.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9AB15058F8D00D47056 /* ssl.h */; };
+		AE933C8F22A69B2100CD8C59 /* scram-common.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC709C31FA63FD2006B591F /* scram-common.h */; };
+		AE933C9022A69B2100CD8C59 /* saslprep.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC709C71FA64051006B591F /* saslprep.h */; };
+		AE933C9122A69B2100CD8C59 /* ssl2.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9AC15058F8D00D47056 /* ssl2.h */; };
+		AE933C9222A69B2100CD8C59 /* ssl23.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9AD15058F8D00D47056 /* ssl23.h */; };
+		AE933C9322A69B2100CD8C59 /* ssl3.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9AE15058F8D00D47056 /* ssl3.h */; };
+		AE933C9422A69B2100CD8C59 /* stack.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9AF15058F8D00D47056 /* stack.h */; };
+		AE933C9522A69B2100CD8C59 /* symhacks.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B015058F8D00D47056 /* symhacks.h */; };
+		AE933C9622A69B2100CD8C59 /* tls1.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B115058F8D00D47056 /* tls1.h */; };
+		AE933C9722A69B2100CD8C59 /* ts.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B215058F8D00D47056 /* ts.h */; };
+		AE933C9822A69B2100CD8C59 /* txt_db.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B315058F8D00D47056 /* txt_db.h */; };
+		AE933C9922A69B2100CD8C59 /* ip.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BA7591017F0441C00C26AD6 /* ip.h */; };
+		AE933C9A22A69B2100CD8C59 /* ui.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B415058F8D00D47056 /* ui.h */; };
+		AE933C9B22A69B2100CD8C59 /* fe_memutils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BB6232617EF965300920783 /* fe_memutils.h */; };
+		AE933C9C22A69B2100CD8C59 /* palloc.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BB6232B17EF96BF00920783 /* palloc.h */; };
+		AE933C9D22A69B2100CD8C59 /* ui_compat.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B515058F8D00D47056 /* ui_compat.h */; };
+		AE933C9E22A69B2100CD8C59 /* whrlpool.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B615058F8D00D47056 /* whrlpool.h */; };
+		AE933C9F22A69B2100CD8C59 /* x509.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B715058F8D00D47056 /* x509.h */; };
+		AE933CA022A69B2100CD8C59 /* x509_vfy.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B815058F8D00D47056 /* x509_vfy.h */; };
+		AE933CA122A69B2100CD8C59 /* x509v3.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B915058F8D00D47056 /* x509v3.h */; };
+		AE933CA222A69B2100CD8C59 /* base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC709BB1FA63F38006B591F /* base64.h */; };
+		AE933CA322A69B2100CD8C59 /* fe-auth.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BBB04D616A91EE500CEE2AE /* fe-auth.h */; };
+		AE933CA422A69B2100CD8C59 /* libpq-int.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BBB04E416A91EE500CEE2AE /* libpq-int.h */; };
+		AE933CA522A69B2100CD8C59 /* pqexpbuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BBB04E916A91EE500CEE2AE /* pqexpbuffer.h */; };
+		AE933CAB22A69B9200CD8C59 /* openssl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECF219522A5EFA60002C0EB /* openssl.framework */; };
+		AE933CAE22A69BAB00CD8C59 /* pgstrcasecmp.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709A21FA624BF006B591F /* pgstrcasecmp.c */; };
+		AE933CAF22A69BAB00CD8C59 /* thread.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709A01FA624BF006B591F /* thread.c */; };
+		AE933CB022A69BAB00CD8C59 /* noblock.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709A11FA624BF006B591F /* noblock.c */; };
+		AE933CB122A69BAB00CD8C59 /* fe-auth.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04D516A91EE500CEE2AE /* fe-auth.c */; };
+		AE933CB222A69BAB00CD8C59 /* encnames.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709971FA622DD006B591F /* encnames.c */; };
+		AE933CB322A69BAB00CD8C59 /* erand48.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC7099D1FA623A5006B591F /* erand48.c */; };
+		AE933CB422A69BAB00CD8C59 /* fe-connect.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04D716A91EE500CEE2AE /* fe-connect.c */; };
+		AE933CB522A69BAB00CD8C59 /* fe-exec.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04D816A91EE500CEE2AE /* fe-exec.c */; };
+		AE933CB622A69BAB00CD8C59 /* pg_strong_random.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC7099B1FA62376006B591F /* pg_strong_random.c */; };
+		AE933CB722A69BAB00CD8C59 /* wchar.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709981FA622DD006B591F /* wchar.c */; };
+		AE933CB822A69BAB00CD8C59 /* sha2_openssl.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709B71FA63E37006B591F /* sha2_openssl.c */; };
+		AE933CB922A69BAB00CD8C59 /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709AD1FA6255A006B591F /* base64.c */; };
+		AE933CBA22A69BAB00CD8C59 /* fe-lobj.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04D916A91EE500CEE2AE /* fe-lobj.c */; };
+		AE933CBB22A69BAB00CD8C59 /* unicode_norm.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709AE1FA6255B006B591F /* unicode_norm.c */; };
+		AE933CBC22A69BAB00CD8C59 /* scram-common.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709AC1FA6255A006B591F /* scram-common.c */; };
+		AE933CBD22A69BAB00CD8C59 /* fe-misc.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04DA16A91EE500CEE2AE /* fe-misc.c */; };
+		AE933CBE22A69BAB00CD8C59 /* fe-print.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04DB16A91EE500CEE2AE /* fe-print.c */; };
+		AE933CBF22A69BAB00CD8C59 /* fe-protocol2.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04DC16A91EE500CEE2AE /* fe-protocol2.c */; };
+		AE933CC022A69BAB00CD8C59 /* fe-protocol3.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04DD16A91EE500CEE2AE /* fe-protocol3.c */; };
+		AE933CC122A69BAB00CD8C59 /* fe-secure.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04DE16A91EE500CEE2AE /* fe-secure.c */; };
+		AE933CC222A69BAB00CD8C59 /* pqsignal.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709A41FA624BF006B591F /* pqsignal.c */; };
+		AE933CC322A69BAB00CD8C59 /* fe_memutils.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BB6232317EF963300920783 /* fe_memutils.c */; };
+		AE933CC422A69BAB00CD8C59 /* ip.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709AB1FA6255A006B591F /* ip.c */; };
+		AE933CC522A69BAB00CD8C59 /* fe-secure-openssl.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7E2EA1DF2E6EC00715BB6 /* fe-secure-openssl.c */; };
+		AE933CC622A69BAB00CD8C59 /* chklocale.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC7099F1FA624BE006B591F /* chklocale.c */; };
+		AE933CC722A69BAB00CD8C59 /* libpq-events.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04E116A91EE500CEE2AE /* libpq-events.c */; };
+		AE933CC822A69BAB00CD8C59 /* saslprep.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709B01FA6255B006B591F /* saslprep.c */; };
+		AE933CC922A69BAB00CD8C59 /* pqexpbuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04E816A91EE500CEE2AE /* pqexpbuffer.c */; };
+		AE933CCA22A69BAB00CD8C59 /* md5.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709AF1FA6255B006B591F /* md5.c */; };
+		AE933CCB22A69BAB00CD8C59 /* inet_net_ntop.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709A31FA624BF006B591F /* inet_net_ntop.c */; };
+		AE933CCC22A69BAB00CD8C59 /* fe-auth-scram.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709911FA62008006B591F /* fe-auth-scram.c */; };
+		AE933CCD22A69BAB00CD8C59 /* snprintf.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709B91FA63E85006B591F /* snprintf.c */; };
+		AE933CCF22A69BAB00CD8C59 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B4C4CB415040B7500840750 /* Foundation.framework */; };
+		AE933CD222A69BAB00CD8C59 /* postgres_ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930D215057FE60021F063 /* postgres_ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE933CD322A69BAB00CD8C59 /* libpq-events.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BBB04E216A91EE500CEE2AE /* libpq-events.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE933CD422A69BAB00CD8C59 /* libpq-fe.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BBB04E316A91EE500CEE2AE /* libpq-fe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE933CD522A69BAB00CD8C59 /* pg_config_ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B5894F017EF99B90039A02A /* pg_config_ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AE933CD622A69BAB00CD8C59 /* c.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930C515057FE60021F063 /* c.h */; };
+		AE933CD722A69BAB00CD8C59 /* getaddrinfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930C615057FE60021F063 /* getaddrinfo.h */; };
+		AE933CD822A69BAB00CD8C59 /* libpq-fs.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930C915057FE60021F063 /* libpq-fs.h */; };
+		AE933CD922A69BAB00CD8C59 /* md5.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930CA15057FE60021F063 /* md5.h */; };
+		AE933CDA22A69BAB00CD8C59 /* pg_wchar.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930CD15057FE60021F063 /* pg_wchar.h */; };
+		AE933CDB22A69BAB00CD8C59 /* pg_config.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930CE15057FE60021F063 /* pg_config.h */; };
+		AE933CDC22A69BAB00CD8C59 /* pg_config_manual.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930CF15057FE60021F063 /* pg_config_manual.h */; };
+		AE933CDD22A69BAB00CD8C59 /* pg_config_os.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930D015057FE60021F063 /* pg_config_os.h */; };
+		AE933CDE22A69BAB00CD8C59 /* port.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930D115057FE60021F063 /* port.h */; };
+		AE933CDF22A69BAB00CD8C59 /* unicode_norm_table.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC709C11FA63F86006B591F /* unicode_norm_table.h */; };
+		AE933CE022A69BAB00CD8C59 /* postgres_fe.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930D315057FE60021F063 /* postgres_fe.h */; };
+		AE933CE122A69BAB00CD8C59 /* libpq-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930F215057FE60021F063 /* libpq-Prefix.pch */; };
+		AE933CE222A69BAB00CD8C59 /* pg_config_paths.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930F415057FE60021F063 /* pg_config_paths.h */; };
+		AE933CE322A69BAB00CD8C59 /* aes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E96F15058F8D00D47056 /* aes.h */; };
+		AE933CE422A69BAB00CD8C59 /* asn1.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97015058F8D00D47056 /* asn1.h */; };
+		AE933CE522A69BAB00CD8C59 /* asn1_mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97115058F8D00D47056 /* asn1_mac.h */; };
+		AE933CE622A69BAB00CD8C59 /* asn1t.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97215058F8D00D47056 /* asn1t.h */; };
+		AE933CE722A69BAB00CD8C59 /* bio.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97315058F8D00D47056 /* bio.h */; };
+		AE933CE822A69BAB00CD8C59 /* blowfish.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97415058F8D00D47056 /* blowfish.h */; };
+		AE933CE922A69BAB00CD8C59 /* bn.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97515058F8D00D47056 /* bn.h */; };
+		AE933CEA22A69BAB00CD8C59 /* buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97615058F8D00D47056 /* buffer.h */; };
+		AE933CEB22A69BAB00CD8C59 /* camellia.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97715058F8D00D47056 /* camellia.h */; };
+		AE933CEC22A69BAB00CD8C59 /* cast.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97815058F8D00D47056 /* cast.h */; };
+		AE933CED22A69BAB00CD8C59 /* cmac.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97915058F8D00D47056 /* cmac.h */; };
+		AE933CEE22A69BAB00CD8C59 /* sha2.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC709BD1FA63F4D006B591F /* sha2.h */; };
+		AE933CEF22A69BAB00CD8C59 /* cms.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97A15058F8D00D47056 /* cms.h */; };
+		AE933CF022A69BAB00CD8C59 /* comp.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97B15058F8D00D47056 /* comp.h */; };
+		AE933CF122A69BAB00CD8C59 /* conf.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97C15058F8D00D47056 /* conf.h */; };
+		AE933CF222A69BAB00CD8C59 /* conf_api.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97D15058F8D00D47056 /* conf_api.h */; };
+		AE933CF322A69BAB00CD8C59 /* crypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97E15058F8D00D47056 /* crypto.h */; };
+		AE933CF422A69BAB00CD8C59 /* des.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97F15058F8D00D47056 /* des.h */; };
+		AE933CF522A69BAB00CD8C59 /* des_old.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98015058F8D00D47056 /* des_old.h */; };
+		AE933CF622A69BAB00CD8C59 /* dh.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98115058F8D00D47056 /* dh.h */; };
+		AE933CF722A69BAB00CD8C59 /* dsa.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98215058F8D00D47056 /* dsa.h */; };
+		AE933CF822A69BAB00CD8C59 /* dso.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98315058F8D00D47056 /* dso.h */; };
+		AE933CF922A69BAB00CD8C59 /* dtls1.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98415058F8D00D47056 /* dtls1.h */; };
+		AE933CFA22A69BAB00CD8C59 /* e_os2.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98515058F8D00D47056 /* e_os2.h */; };
+		AE933CFB22A69BAB00CD8C59 /* ebcdic.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98615058F8D00D47056 /* ebcdic.h */; };
+		AE933CFC22A69BAB00CD8C59 /* ec.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98715058F8D00D47056 /* ec.h */; };
+		AE933CFD22A69BAB00CD8C59 /* ecdh.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98815058F8D00D47056 /* ecdh.h */; };
+		AE933CFE22A69BAB00CD8C59 /* ecdsa.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98915058F8D00D47056 /* ecdsa.h */; };
+		AE933CFF22A69BAB00CD8C59 /* engine.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98A15058F8D00D47056 /* engine.h */; };
+		AE933D0022A69BAB00CD8C59 /* err.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98B15058F8D00D47056 /* err.h */; };
+		AE933D0122A69BAB00CD8C59 /* evp.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98C15058F8D00D47056 /* evp.h */; };
+		AE933D0222A69BAB00CD8C59 /* hmac.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98D15058F8D00D47056 /* hmac.h */; };
+		AE933D0322A69BAB00CD8C59 /* idea.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98E15058F8D00D47056 /* idea.h */; };
+		AE933D0422A69BAB00CD8C59 /* unicode_norm.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC709BF1FA63F74006B591F /* unicode_norm.h */; };
+		AE933D0522A69BAB00CD8C59 /* krb5_asn.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98F15058F8D00D47056 /* krb5_asn.h */; };
+		AE933D0622A69BAB00CD8C59 /* kssl.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99015058F8D00D47056 /* kssl.h */; };
+		AE933D0722A69BAB00CD8C59 /* lhash.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99115058F8D00D47056 /* lhash.h */; };
+		AE933D0822A69BAB00CD8C59 /* md4.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99215058F8D00D47056 /* md4.h */; };
+		AE933D0922A69BAB00CD8C59 /* md5.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99315058F8D00D47056 /* md5.h */; };
+		AE933D0A22A69BAB00CD8C59 /* mdc2.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99415058F8D00D47056 /* mdc2.h */; };
+		AE933D0B22A69BAB00CD8C59 /* modes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99515058F8D00D47056 /* modes.h */; };
+		AE933D0C22A69BAB00CD8C59 /* obj_mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99615058F8D00D47056 /* obj_mac.h */; };
+		AE933D0D22A69BAB00CD8C59 /* objects.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99715058F8D00D47056 /* objects.h */; };
+		AE933D0E22A69BAB00CD8C59 /* ocsp.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99815058F8D00D47056 /* ocsp.h */; };
+		AE933D0F22A69BAB00CD8C59 /* opensslconf.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99915058F8D00D47056 /* opensslconf.h */; };
+		AE933D1022A69BAB00CD8C59 /* opensslv.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99A15058F8D00D47056 /* opensslv.h */; };
+		AE933D1122A69BAB00CD8C59 /* ossl_typ.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99B15058F8D00D47056 /* ossl_typ.h */; };
+		AE933D1222A69BAB00CD8C59 /* pem.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99C15058F8D00D47056 /* pem.h */; };
+		AE933D1322A69BAB00CD8C59 /* pem2.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99D15058F8D00D47056 /* pem2.h */; };
+		AE933D1422A69BAB00CD8C59 /* pqcomm.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BA7590E17F043F100C26AD6 /* pqcomm.h */; };
+		AE933D1522A69BAB00CD8C59 /* pkcs12.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99E15058F8D00D47056 /* pkcs12.h */; };
+		AE933D1622A69BAB00CD8C59 /* pkcs7.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99F15058F8D00D47056 /* pkcs7.h */; };
+		AE933D1722A69BAB00CD8C59 /* pqueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A015058F8D00D47056 /* pqueue.h */; };
+		AE933D1822A69BAB00CD8C59 /* rand.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A115058F8D00D47056 /* rand.h */; };
+		AE933D1922A69BAB00CD8C59 /* rc2.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A215058F8D00D47056 /* rc2.h */; };
+		AE933D1A22A69BAB00CD8C59 /* rc4.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A315058F8D00D47056 /* rc4.h */; };
+		AE933D1B22A69BAB00CD8C59 /* ripemd.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A415058F8D00D47056 /* ripemd.h */; };
+		AE933D1C22A69BAB00CD8C59 /* rsa.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A515058F8D00D47056 /* rsa.h */; };
+		AE933D1D22A69BAB00CD8C59 /* safestack.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A615058F8D00D47056 /* safestack.h */; };
+		AE933D1E22A69BAB00CD8C59 /* scram.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC709C51FA64033006B591F /* scram.h */; };
+		AE933D1F22A69BAB00CD8C59 /* seed.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A715058F8D00D47056 /* seed.h */; };
+		AE933D2022A69BAB00CD8C59 /* sha.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A815058F8D00D47056 /* sha.h */; };
+		AE933D2122A69BAB00CD8C59 /* srp.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A915058F8D00D47056 /* srp.h */; };
+		AE933D2222A69BAB00CD8C59 /* srtp.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9AA15058F8D00D47056 /* srtp.h */; };
+		AE933D2322A69BAB00CD8C59 /* ssl.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9AB15058F8D00D47056 /* ssl.h */; };
+		AE933D2422A69BAB00CD8C59 /* scram-common.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC709C31FA63FD2006B591F /* scram-common.h */; };
+		AE933D2522A69BAB00CD8C59 /* saslprep.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC709C71FA64051006B591F /* saslprep.h */; };
+		AE933D2622A69BAB00CD8C59 /* ssl2.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9AC15058F8D00D47056 /* ssl2.h */; };
+		AE933D2722A69BAB00CD8C59 /* ssl23.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9AD15058F8D00D47056 /* ssl23.h */; };
+		AE933D2822A69BAB00CD8C59 /* ssl3.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9AE15058F8D00D47056 /* ssl3.h */; };
+		AE933D2922A69BAB00CD8C59 /* stack.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9AF15058F8D00D47056 /* stack.h */; };
+		AE933D2A22A69BAB00CD8C59 /* symhacks.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B015058F8D00D47056 /* symhacks.h */; };
+		AE933D2B22A69BAB00CD8C59 /* tls1.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B115058F8D00D47056 /* tls1.h */; };
+		AE933D2C22A69BAB00CD8C59 /* ts.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B215058F8D00D47056 /* ts.h */; };
+		AE933D2D22A69BAB00CD8C59 /* txt_db.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B315058F8D00D47056 /* txt_db.h */; };
+		AE933D2E22A69BAB00CD8C59 /* ip.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BA7591017F0441C00C26AD6 /* ip.h */; };
+		AE933D2F22A69BAB00CD8C59 /* ui.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B415058F8D00D47056 /* ui.h */; };
+		AE933D3022A69BAB00CD8C59 /* fe_memutils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BB6232617EF965300920783 /* fe_memutils.h */; };
+		AE933D3122A69BAB00CD8C59 /* palloc.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BB6232B17EF96BF00920783 /* palloc.h */; };
+		AE933D3222A69BAB00CD8C59 /* ui_compat.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B515058F8D00D47056 /* ui_compat.h */; };
+		AE933D3322A69BAB00CD8C59 /* whrlpool.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B615058F8D00D47056 /* whrlpool.h */; };
+		AE933D3422A69BAB00CD8C59 /* x509.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B715058F8D00D47056 /* x509.h */; };
+		AE933D3522A69BAB00CD8C59 /* x509_vfy.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B815058F8D00D47056 /* x509_vfy.h */; };
+		AE933D3622A69BAB00CD8C59 /* x509v3.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B915058F8D00D47056 /* x509v3.h */; };
+		AE933D3722A69BAB00CD8C59 /* base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC709BB1FA63F38006B591F /* base64.h */; };
+		AE933D3822A69BAB00CD8C59 /* fe-auth.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BBB04D616A91EE500CEE2AE /* fe-auth.h */; };
+		AE933D3922A69BAB00CD8C59 /* libpq-int.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BBB04E416A91EE500CEE2AE /* libpq-int.h */; };
+		AE933D3A22A69BAB00CD8C59 /* pqexpbuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BBB04E916A91EE500CEE2AE /* pqexpbuffer.h */; };
+		AE933D4022A69BC200CD8C59 /* openssl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECF219B22A5EFA60002C0EB /* openssl.framework */; };
+		AECF219C22A5EFA60002C0EB /* openssl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECF219522A5EFA60002C0EB /* openssl.framework */; };
+		AECF219D22A5EFA60002C0EB /* openssl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECF219722A5EFA60002C0EB /* openssl.framework */; };
+		AECF219E22A5EFA60002C0EB /* openssl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECF219922A5EFA60002C0EB /* openssl.framework */; };
+		AECF219F22A5EFA60002C0EB /* openssl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECF219B22A5EFA60002C0EB /* openssl.framework */; };
+		AECF21A022A5EFCC0002C0EB /* openssl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECF219922A5EFA60002C0EB /* openssl.framework */; };
+		AECF21A322A6133C0002C0EB /* pgstrcasecmp.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709A21FA624BF006B591F /* pgstrcasecmp.c */; };
+		AECF21A422A6133C0002C0EB /* thread.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709A01FA624BF006B591F /* thread.c */; };
+		AECF21A522A6133C0002C0EB /* noblock.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709A11FA624BF006B591F /* noblock.c */; };
+		AECF21A622A6133C0002C0EB /* fe-auth.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04D516A91EE500CEE2AE /* fe-auth.c */; };
+		AECF21A722A6133C0002C0EB /* encnames.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709971FA622DD006B591F /* encnames.c */; };
+		AECF21A822A6133C0002C0EB /* erand48.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC7099D1FA623A5006B591F /* erand48.c */; };
+		AECF21A922A6133C0002C0EB /* fe-connect.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04D716A91EE500CEE2AE /* fe-connect.c */; };
+		AECF21AA22A6133C0002C0EB /* fe-exec.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04D816A91EE500CEE2AE /* fe-exec.c */; };
+		AECF21AB22A6133C0002C0EB /* pg_strong_random.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC7099B1FA62376006B591F /* pg_strong_random.c */; };
+		AECF21AC22A6133C0002C0EB /* wchar.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709981FA622DD006B591F /* wchar.c */; };
+		AECF21AD22A6133C0002C0EB /* sha2_openssl.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709B71FA63E37006B591F /* sha2_openssl.c */; };
+		AECF21AE22A6133C0002C0EB /* base64.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709AD1FA6255A006B591F /* base64.c */; };
+		AECF21AF22A6133C0002C0EB /* fe-lobj.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04D916A91EE500CEE2AE /* fe-lobj.c */; };
+		AECF21B022A6133C0002C0EB /* unicode_norm.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709AE1FA6255B006B591F /* unicode_norm.c */; };
+		AECF21B122A6133C0002C0EB /* scram-common.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709AC1FA6255A006B591F /* scram-common.c */; };
+		AECF21B222A6133C0002C0EB /* fe-misc.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04DA16A91EE500CEE2AE /* fe-misc.c */; };
+		AECF21B322A6133C0002C0EB /* fe-print.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04DB16A91EE500CEE2AE /* fe-print.c */; };
+		AECF21B422A6133C0002C0EB /* fe-protocol2.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04DC16A91EE500CEE2AE /* fe-protocol2.c */; };
+		AECF21B522A6133C0002C0EB /* fe-protocol3.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04DD16A91EE500CEE2AE /* fe-protocol3.c */; };
+		AECF21B622A6133C0002C0EB /* fe-secure.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04DE16A91EE500CEE2AE /* fe-secure.c */; };
+		AECF21B722A6133C0002C0EB /* pqsignal.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709A41FA624BF006B591F /* pqsignal.c */; };
+		AECF21B822A6133C0002C0EB /* fe_memutils.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BB6232317EF963300920783 /* fe_memutils.c */; };
+		AECF21B922A6133C0002C0EB /* ip.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709AB1FA6255A006B591F /* ip.c */; };
+		AECF21BA22A6133C0002C0EB /* fe-secure-openssl.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BE7E2EA1DF2E6EC00715BB6 /* fe-secure-openssl.c */; };
+		AECF21BB22A6133C0002C0EB /* chklocale.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC7099F1FA624BE006B591F /* chklocale.c */; };
+		AECF21BC22A6133C0002C0EB /* libpq-events.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04E116A91EE500CEE2AE /* libpq-events.c */; };
+		AECF21BD22A6133C0002C0EB /* saslprep.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709B01FA6255B006B591F /* saslprep.c */; };
+		AECF21BE22A6133C0002C0EB /* pqexpbuffer.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BBB04E816A91EE500CEE2AE /* pqexpbuffer.c */; };
+		AECF21BF22A6133C0002C0EB /* md5.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709AF1FA6255B006B591F /* md5.c */; };
+		AECF21C022A6133C0002C0EB /* inet_net_ntop.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709A31FA624BF006B591F /* inet_net_ntop.c */; };
+		AECF21C122A6133C0002C0EB /* fe-auth-scram.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709911FA62008006B591F /* fe-auth-scram.c */; };
+		AECF21C222A6133C0002C0EB /* snprintf.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709B91FA63E85006B591F /* snprintf.c */; };
+		AECF21C422A6133C0002C0EB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4B4C4CB415040B7500840750 /* Foundation.framework */; };
+		AECF21C722A6133C0002C0EB /* postgres_ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930D215057FE60021F063 /* postgres_ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AECF21C822A6133C0002C0EB /* libpq-events.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BBB04E216A91EE500CEE2AE /* libpq-events.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AECF21C922A6133C0002C0EB /* libpq-fe.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BBB04E316A91EE500CEE2AE /* libpq-fe.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AECF21CA22A6133C0002C0EB /* pg_config_ext.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B5894F017EF99B90039A02A /* pg_config_ext.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AECF21CB22A6133C0002C0EB /* c.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930C515057FE60021F063 /* c.h */; };
+		AECF21CC22A6133C0002C0EB /* getaddrinfo.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930C615057FE60021F063 /* getaddrinfo.h */; };
+		AECF21CD22A6133C0002C0EB /* libpq-fs.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930C915057FE60021F063 /* libpq-fs.h */; };
+		AECF21CE22A6133C0002C0EB /* md5.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930CA15057FE60021F063 /* md5.h */; };
+		AECF21CF22A6133C0002C0EB /* pg_wchar.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930CD15057FE60021F063 /* pg_wchar.h */; };
+		AECF21D022A6133C0002C0EB /* pg_config.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930CE15057FE60021F063 /* pg_config.h */; };
+		AECF21D122A6133C0002C0EB /* pg_config_manual.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930CF15057FE60021F063 /* pg_config_manual.h */; };
+		AECF21D222A6133C0002C0EB /* pg_config_os.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930D015057FE60021F063 /* pg_config_os.h */; };
+		AECF21D322A6133C0002C0EB /* port.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930D115057FE60021F063 /* port.h */; };
+		AECF21D422A6133C0002C0EB /* unicode_norm_table.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC709C11FA63F86006B591F /* unicode_norm_table.h */; };
+		AECF21D522A6133C0002C0EB /* postgres_fe.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930D315057FE60021F063 /* postgres_fe.h */; };
+		AECF21D622A6133C0002C0EB /* libpq-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930F215057FE60021F063 /* libpq-Prefix.pch */; };
+		AECF21D722A6133C0002C0EB /* pg_config_paths.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930F415057FE60021F063 /* pg_config_paths.h */; };
+		AECF21D822A6133C0002C0EB /* aes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E96F15058F8D00D47056 /* aes.h */; };
+		AECF21D922A6133C0002C0EB /* asn1.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97015058F8D00D47056 /* asn1.h */; };
+		AECF21DA22A6133C0002C0EB /* asn1_mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97115058F8D00D47056 /* asn1_mac.h */; };
+		AECF21DB22A6133C0002C0EB /* asn1t.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97215058F8D00D47056 /* asn1t.h */; };
+		AECF21DC22A6133C0002C0EB /* bio.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97315058F8D00D47056 /* bio.h */; };
+		AECF21DD22A6133C0002C0EB /* blowfish.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97415058F8D00D47056 /* blowfish.h */; };
+		AECF21DE22A6133C0002C0EB /* bn.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97515058F8D00D47056 /* bn.h */; };
+		AECF21DF22A6133C0002C0EB /* buffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97615058F8D00D47056 /* buffer.h */; };
+		AECF21E022A6133C0002C0EB /* camellia.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97715058F8D00D47056 /* camellia.h */; };
+		AECF21E122A6133C0002C0EB /* cast.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97815058F8D00D47056 /* cast.h */; };
+		AECF21E222A6133C0002C0EB /* cmac.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97915058F8D00D47056 /* cmac.h */; };
+		AECF21E322A6133C0002C0EB /* sha2.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC709BD1FA63F4D006B591F /* sha2.h */; };
+		AECF21E422A6133C0002C0EB /* cms.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97A15058F8D00D47056 /* cms.h */; };
+		AECF21E522A6133C0002C0EB /* comp.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97B15058F8D00D47056 /* comp.h */; };
+		AECF21E622A6133C0002C0EB /* conf.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97C15058F8D00D47056 /* conf.h */; };
+		AECF21E722A6133C0002C0EB /* conf_api.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97D15058F8D00D47056 /* conf_api.h */; };
+		AECF21E822A6133C0002C0EB /* crypto.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97E15058F8D00D47056 /* crypto.h */; };
+		AECF21E922A6133C0002C0EB /* des.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E97F15058F8D00D47056 /* des.h */; };
+		AECF21EA22A6133C0002C0EB /* des_old.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98015058F8D00D47056 /* des_old.h */; };
+		AECF21EB22A6133C0002C0EB /* dh.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98115058F8D00D47056 /* dh.h */; };
+		AECF21EC22A6133C0002C0EB /* dsa.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98215058F8D00D47056 /* dsa.h */; };
+		AECF21ED22A6133C0002C0EB /* dso.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98315058F8D00D47056 /* dso.h */; };
+		AECF21EE22A6133C0002C0EB /* dtls1.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98415058F8D00D47056 /* dtls1.h */; };
+		AECF21EF22A6133C0002C0EB /* e_os2.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98515058F8D00D47056 /* e_os2.h */; };
+		AECF21F022A6133C0002C0EB /* ebcdic.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98615058F8D00D47056 /* ebcdic.h */; };
+		AECF21F122A6133C0002C0EB /* ec.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98715058F8D00D47056 /* ec.h */; };
+		AECF21F222A6133C0002C0EB /* ecdh.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98815058F8D00D47056 /* ecdh.h */; };
+		AECF21F322A6133C0002C0EB /* ecdsa.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98915058F8D00D47056 /* ecdsa.h */; };
+		AECF21F422A6133C0002C0EB /* engine.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98A15058F8D00D47056 /* engine.h */; };
+		AECF21F522A6133C0002C0EB /* err.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98B15058F8D00D47056 /* err.h */; };
+		AECF21F622A6133C0002C0EB /* evp.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98C15058F8D00D47056 /* evp.h */; };
+		AECF21F722A6133C0002C0EB /* hmac.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98D15058F8D00D47056 /* hmac.h */; };
+		AECF21F822A6133C0002C0EB /* idea.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98E15058F8D00D47056 /* idea.h */; };
+		AECF21F922A6133C0002C0EB /* unicode_norm.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC709BF1FA63F74006B591F /* unicode_norm.h */; };
+		AECF21FA22A6133C0002C0EB /* krb5_asn.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E98F15058F8D00D47056 /* krb5_asn.h */; };
+		AECF21FB22A6133C0002C0EB /* kssl.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99015058F8D00D47056 /* kssl.h */; };
+		AECF21FC22A6133C0002C0EB /* lhash.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99115058F8D00D47056 /* lhash.h */; };
+		AECF21FD22A6133C0002C0EB /* md4.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99215058F8D00D47056 /* md4.h */; };
+		AECF21FE22A6133C0002C0EB /* md5.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99315058F8D00D47056 /* md5.h */; };
+		AECF21FF22A6133C0002C0EB /* mdc2.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99415058F8D00D47056 /* mdc2.h */; };
+		AECF220022A6133C0002C0EB /* modes.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99515058F8D00D47056 /* modes.h */; };
+		AECF220122A6133C0002C0EB /* obj_mac.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99615058F8D00D47056 /* obj_mac.h */; };
+		AECF220222A6133C0002C0EB /* objects.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99715058F8D00D47056 /* objects.h */; };
+		AECF220322A6133C0002C0EB /* ocsp.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99815058F8D00D47056 /* ocsp.h */; };
+		AECF220422A6133C0002C0EB /* opensslconf.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99915058F8D00D47056 /* opensslconf.h */; };
+		AECF220522A6133C0002C0EB /* opensslv.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99A15058F8D00D47056 /* opensslv.h */; };
+		AECF220622A6133C0002C0EB /* ossl_typ.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99B15058F8D00D47056 /* ossl_typ.h */; };
+		AECF220722A6133C0002C0EB /* pem.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99C15058F8D00D47056 /* pem.h */; };
+		AECF220822A6133C0002C0EB /* pem2.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99D15058F8D00D47056 /* pem2.h */; };
+		AECF220922A6133C0002C0EB /* pqcomm.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BA7590E17F043F100C26AD6 /* pqcomm.h */; };
+		AECF220A22A6133C0002C0EB /* pkcs12.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99E15058F8D00D47056 /* pkcs12.h */; };
+		AECF220B22A6133C0002C0EB /* pkcs7.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E99F15058F8D00D47056 /* pkcs7.h */; };
+		AECF220C22A6133C0002C0EB /* pqueue.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A015058F8D00D47056 /* pqueue.h */; };
+		AECF220D22A6133C0002C0EB /* rand.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A115058F8D00D47056 /* rand.h */; };
+		AECF220E22A6133C0002C0EB /* rc2.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A215058F8D00D47056 /* rc2.h */; };
+		AECF220F22A6133C0002C0EB /* rc4.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A315058F8D00D47056 /* rc4.h */; };
+		AECF221022A6133C0002C0EB /* ripemd.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A415058F8D00D47056 /* ripemd.h */; };
+		AECF221122A6133C0002C0EB /* rsa.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A515058F8D00D47056 /* rsa.h */; };
+		AECF221222A6133C0002C0EB /* safestack.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A615058F8D00D47056 /* safestack.h */; };
+		AECF221322A6133C0002C0EB /* scram.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC709C51FA64033006B591F /* scram.h */; };
+		AECF221422A6133C0002C0EB /* seed.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A715058F8D00D47056 /* seed.h */; };
+		AECF221522A6133C0002C0EB /* sha.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A815058F8D00D47056 /* sha.h */; };
+		AECF221622A6133C0002C0EB /* srp.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9A915058F8D00D47056 /* srp.h */; };
+		AECF221722A6133C0002C0EB /* srtp.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9AA15058F8D00D47056 /* srtp.h */; };
+		AECF221822A6133C0002C0EB /* ssl.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9AB15058F8D00D47056 /* ssl.h */; };
+		AECF221922A6133C0002C0EB /* scram-common.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC709C31FA63FD2006B591F /* scram-common.h */; };
+		AECF221A22A6133C0002C0EB /* saslprep.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC709C71FA64051006B591F /* saslprep.h */; };
+		AECF221B22A6133C0002C0EB /* ssl2.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9AC15058F8D00D47056 /* ssl2.h */; };
+		AECF221C22A6133C0002C0EB /* ssl23.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9AD15058F8D00D47056 /* ssl23.h */; };
+		AECF221D22A6133C0002C0EB /* ssl3.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9AE15058F8D00D47056 /* ssl3.h */; };
+		AECF221E22A6133C0002C0EB /* stack.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9AF15058F8D00D47056 /* stack.h */; };
+		AECF221F22A6133C0002C0EB /* symhacks.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B015058F8D00D47056 /* symhacks.h */; };
+		AECF222022A6133C0002C0EB /* tls1.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B115058F8D00D47056 /* tls1.h */; };
+		AECF222122A6133C0002C0EB /* ts.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B215058F8D00D47056 /* ts.h */; };
+		AECF222222A6133C0002C0EB /* txt_db.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B315058F8D00D47056 /* txt_db.h */; };
+		AECF222322A6133C0002C0EB /* ip.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BA7591017F0441C00C26AD6 /* ip.h */; };
+		AECF222422A6133C0002C0EB /* ui.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B415058F8D00D47056 /* ui.h */; };
+		AECF222522A6133C0002C0EB /* fe_memutils.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BB6232617EF965300920783 /* fe_memutils.h */; };
+		AECF222622A6133C0002C0EB /* palloc.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BB6232B17EF96BF00920783 /* palloc.h */; };
+		AECF222722A6133C0002C0EB /* ui_compat.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B515058F8D00D47056 /* ui_compat.h */; };
+		AECF222822A6133C0002C0EB /* whrlpool.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B615058F8D00D47056 /* whrlpool.h */; };
+		AECF222922A6133C0002C0EB /* x509.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B715058F8D00D47056 /* x509.h */; };
+		AECF222A22A6133C0002C0EB /* x509_vfy.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B815058F8D00D47056 /* x509_vfy.h */; };
+		AECF222B22A6133C0002C0EB /* x509v3.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC3E9B915058F8D00D47056 /* x509v3.h */; };
+		AECF222C22A6133C0002C0EB /* base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BC709BB1FA63F38006B591F /* base64.h */; };
+		AECF222D22A6133C0002C0EB /* fe-auth.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BBB04D616A91EE500CEE2AE /* fe-auth.h */; };
+		AECF222E22A6133C0002C0EB /* libpq-int.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BBB04E416A91EE500CEE2AE /* libpq-int.h */; };
+		AECF222F22A6133C0002C0EB /* pqexpbuffer.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BBB04E916A91EE500CEE2AE /* pqexpbuffer.h */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -180,6 +624,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 4B4C4CB015040B7500840750;
 			remoteInfo = libpq;
+		};
+		AE933D4322A69C0500CD8C59 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B4C4CA815040B7500840750 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4B4C4CB015040B7500840750;
+			remoteInfo = libpq;
+		};
+		AECF223C22A613C00002C0EB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B4C4CA815040B7500840750 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AECF21A122A6133C0002C0EB;
+			remoteInfo = libpq_watchOS;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -330,6 +788,15 @@
 		4BE930F215057FE60021F063 /* libpq-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "libpq-Prefix.pch"; path = "src/libpq-Prefix.pch"; sourceTree = "<group>"; };
 		4BE930F415057FE60021F063 /* pg_config_paths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pg_config_paths.h; sourceTree = "<group>"; };
 		76F0F9551FA77EBA002626FA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		AE933CAA22A69B2100CD8C59 /* libpq.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libpq.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE933D3F22A69BAB00CD8C59 /* libpq.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libpq.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE9CEB3522A61B3200260B93 /* libcrypto-WatchOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libcrypto-WatchOS.a"; sourceTree = "<group>"; };
+		AE9CEB3622A61B3200260B93 /* libssl-WatchOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libssl-WatchOS.a"; sourceTree = "<group>"; };
+		AECF219522A5EFA60002C0EB /* openssl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = openssl.framework; sourceTree = "<group>"; };
+		AECF219722A5EFA60002C0EB /* openssl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = openssl.framework; sourceTree = "<group>"; };
+		AECF219922A5EFA60002C0EB /* openssl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = openssl.framework; sourceTree = "<group>"; };
+		AECF219B22A5EFA60002C0EB /* openssl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = openssl.framework; sourceTree = "<group>"; };
+		AECF223422A6133C0002C0EB /* libpq.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libpq.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -338,8 +805,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4B4C4CB515040B7500840750 /* Foundation.framework in Frameworks */,
-				4B4C4E0C1504295600840750 /* libcrypto.a in Frameworks */,
-				4B4C4E0D1504295600840750 /* libssl.a in Frameworks */,
+				AECF21A022A5EFCC0002C0EB /* openssl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,7 +813,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AECF219F22A5EFA60002C0EB /* openssl.framework in Frameworks */,
+				AECF219D22A5EFA60002C0EB /* openssl.framework in Frameworks */,
+				AECF219E22A5EFA60002C0EB /* openssl.framework in Frameworks */,
 				4BE7E3151DF363C400715BB6 /* libpq.a in Frameworks */,
+				AECF219C22A5EFA60002C0EB /* openssl.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE933C3922A69B2100CD8C59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE933C3A22A69B2100CD8C59 /* Foundation.framework in Frameworks */,
+				AE933CAB22A69B9200CD8C59 /* openssl.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE933CCE22A69BAB00CD8C59 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE933CCF22A69BAB00CD8C59 /* Foundation.framework in Frameworks */,
+				AE933D4022A69BC200CD8C59 /* openssl.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AECF21C322A6133C0002C0EB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AECF21C422A6133C0002C0EB /* Foundation.framework in Frameworks */,
+				AE933C1622A6975100CD8C59 /* openssl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +855,7 @@
 			isa = PBXGroup;
 			children = (
 				76F0F9551FA77EBA002626FA /* README.md */,
+				AECF219322A5EFA60002C0EB /* openssl_frameworks_1_1 */,
 				4BE930C315057FE60021F063 /* src */,
 				4BE7E3111DF363C400715BB6 /* libpqTests */,
 				4B4C4CB315040B7500840750 /* Frameworks */,
@@ -370,6 +868,9 @@
 			children = (
 				4B4C4CB115040B7500840750 /* libpq.a */,
 				4BE7E3101DF363C400715BB6 /* libpqTests.xctest */,
+				AECF223422A6133C0002C0EB /* libpq.a */,
+				AE933CAA22A69B2100CD8C59 /* libpq.a */,
+				AE933D3F22A69BAB00CD8C59 /* libpq.a */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -652,6 +1153,51 @@
 			path = port;
 			sourceTree = "<group>";
 		};
+		AECF219322A5EFA60002C0EB /* openssl_frameworks_1_1 */ = {
+			isa = PBXGroup;
+			children = (
+				AECF219422A5EFA60002C0EB /* macOS */,
+				AECF219622A5EFA60002C0EB /* watchOS */,
+				AECF219822A5EFA60002C0EB /* iOS */,
+				AECF219A22A5EFA60002C0EB /* tvOS */,
+			);
+			path = openssl_frameworks_1_1;
+			sourceTree = "<group>";
+		};
+		AECF219422A5EFA60002C0EB /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				AECF219522A5EFA60002C0EB /* openssl.framework */,
+			);
+			path = macOS;
+			sourceTree = "<group>";
+		};
+		AECF219622A5EFA60002C0EB /* watchOS */ = {
+			isa = PBXGroup;
+			children = (
+				AE9CEB3522A61B3200260B93 /* libcrypto-WatchOS.a */,
+				AE9CEB3622A61B3200260B93 /* libssl-WatchOS.a */,
+				AECF219722A5EFA60002C0EB /* openssl.framework */,
+			);
+			path = watchOS;
+			sourceTree = "<group>";
+		};
+		AECF219822A5EFA60002C0EB /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				AECF219922A5EFA60002C0EB /* openssl.framework */,
+			);
+			path = iOS;
+			sourceTree = "<group>";
+		};
+		AECF219A22A5EFA60002C0EB /* tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				AECF219B22A5EFA60002C0EB /* openssl.framework */,
+			);
+			path = tvOS;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -767,12 +1313,348 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AE933C3C22A69B2100CD8C59 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE933C3D22A69B2100CD8C59 /* postgres_ext.h in Headers */,
+				AE933C3E22A69B2100CD8C59 /* libpq-events.h in Headers */,
+				AE933C3F22A69B2100CD8C59 /* libpq-fe.h in Headers */,
+				AE933C4022A69B2100CD8C59 /* pg_config_ext.h in Headers */,
+				AE933C4122A69B2100CD8C59 /* c.h in Headers */,
+				AE933C4222A69B2100CD8C59 /* getaddrinfo.h in Headers */,
+				AE933C4322A69B2100CD8C59 /* libpq-fs.h in Headers */,
+				AE933C4422A69B2100CD8C59 /* md5.h in Headers */,
+				AE933C4522A69B2100CD8C59 /* pg_wchar.h in Headers */,
+				AE933C4622A69B2100CD8C59 /* pg_config.h in Headers */,
+				AE933C4722A69B2100CD8C59 /* pg_config_manual.h in Headers */,
+				AE933C4822A69B2100CD8C59 /* pg_config_os.h in Headers */,
+				AE933C4922A69B2100CD8C59 /* port.h in Headers */,
+				AE933C4A22A69B2100CD8C59 /* unicode_norm_table.h in Headers */,
+				AE933C4B22A69B2100CD8C59 /* postgres_fe.h in Headers */,
+				AE933C4C22A69B2100CD8C59 /* libpq-Prefix.pch in Headers */,
+				AE933C4D22A69B2100CD8C59 /* pg_config_paths.h in Headers */,
+				AE933C4E22A69B2100CD8C59 /* aes.h in Headers */,
+				AE933C4F22A69B2100CD8C59 /* asn1.h in Headers */,
+				AE933C5022A69B2100CD8C59 /* asn1_mac.h in Headers */,
+				AE933C5122A69B2100CD8C59 /* asn1t.h in Headers */,
+				AE933C5222A69B2100CD8C59 /* bio.h in Headers */,
+				AE933C5322A69B2100CD8C59 /* blowfish.h in Headers */,
+				AE933C5422A69B2100CD8C59 /* bn.h in Headers */,
+				AE933C5522A69B2100CD8C59 /* buffer.h in Headers */,
+				AE933C5622A69B2100CD8C59 /* camellia.h in Headers */,
+				AE933C5722A69B2100CD8C59 /* cast.h in Headers */,
+				AE933C5822A69B2100CD8C59 /* cmac.h in Headers */,
+				AE933C5922A69B2100CD8C59 /* sha2.h in Headers */,
+				AE933C5A22A69B2100CD8C59 /* cms.h in Headers */,
+				AE933C5B22A69B2100CD8C59 /* comp.h in Headers */,
+				AE933C5C22A69B2100CD8C59 /* conf.h in Headers */,
+				AE933C5D22A69B2100CD8C59 /* conf_api.h in Headers */,
+				AE933C5E22A69B2100CD8C59 /* crypto.h in Headers */,
+				AE933C5F22A69B2100CD8C59 /* des.h in Headers */,
+				AE933C6022A69B2100CD8C59 /* des_old.h in Headers */,
+				AE933C6122A69B2100CD8C59 /* dh.h in Headers */,
+				AE933C6222A69B2100CD8C59 /* dsa.h in Headers */,
+				AE933C6322A69B2100CD8C59 /* dso.h in Headers */,
+				AE933C6422A69B2100CD8C59 /* dtls1.h in Headers */,
+				AE933C6522A69B2100CD8C59 /* e_os2.h in Headers */,
+				AE933C6622A69B2100CD8C59 /* ebcdic.h in Headers */,
+				AE933C6722A69B2100CD8C59 /* ec.h in Headers */,
+				AE933C6822A69B2100CD8C59 /* ecdh.h in Headers */,
+				AE933C6922A69B2100CD8C59 /* ecdsa.h in Headers */,
+				AE933C6A22A69B2100CD8C59 /* engine.h in Headers */,
+				AE933C6B22A69B2100CD8C59 /* err.h in Headers */,
+				AE933C6C22A69B2100CD8C59 /* evp.h in Headers */,
+				AE933C6D22A69B2100CD8C59 /* hmac.h in Headers */,
+				AE933C6E22A69B2100CD8C59 /* idea.h in Headers */,
+				AE933C6F22A69B2100CD8C59 /* unicode_norm.h in Headers */,
+				AE933C7022A69B2100CD8C59 /* krb5_asn.h in Headers */,
+				AE933C7122A69B2100CD8C59 /* kssl.h in Headers */,
+				AE933C7222A69B2100CD8C59 /* lhash.h in Headers */,
+				AE933C7322A69B2100CD8C59 /* md4.h in Headers */,
+				AE933C7422A69B2100CD8C59 /* md5.h in Headers */,
+				AE933C7522A69B2100CD8C59 /* mdc2.h in Headers */,
+				AE933C7622A69B2100CD8C59 /* modes.h in Headers */,
+				AE933C7722A69B2100CD8C59 /* obj_mac.h in Headers */,
+				AE933C7822A69B2100CD8C59 /* objects.h in Headers */,
+				AE933C7922A69B2100CD8C59 /* ocsp.h in Headers */,
+				AE933C7A22A69B2100CD8C59 /* opensslconf.h in Headers */,
+				AE933C7B22A69B2100CD8C59 /* opensslv.h in Headers */,
+				AE933C7C22A69B2100CD8C59 /* ossl_typ.h in Headers */,
+				AE933C7D22A69B2100CD8C59 /* pem.h in Headers */,
+				AE933C7E22A69B2100CD8C59 /* pem2.h in Headers */,
+				AE933C7F22A69B2100CD8C59 /* pqcomm.h in Headers */,
+				AE933C8022A69B2100CD8C59 /* pkcs12.h in Headers */,
+				AE933C8122A69B2100CD8C59 /* pkcs7.h in Headers */,
+				AE933C8222A69B2100CD8C59 /* pqueue.h in Headers */,
+				AE933C8322A69B2100CD8C59 /* rand.h in Headers */,
+				AE933C8422A69B2100CD8C59 /* rc2.h in Headers */,
+				AE933C8522A69B2100CD8C59 /* rc4.h in Headers */,
+				AE933C8622A69B2100CD8C59 /* ripemd.h in Headers */,
+				AE933C8722A69B2100CD8C59 /* rsa.h in Headers */,
+				AE933C8822A69B2100CD8C59 /* safestack.h in Headers */,
+				AE933C8922A69B2100CD8C59 /* scram.h in Headers */,
+				AE933C8A22A69B2100CD8C59 /* seed.h in Headers */,
+				AE933C8B22A69B2100CD8C59 /* sha.h in Headers */,
+				AE933C8C22A69B2100CD8C59 /* srp.h in Headers */,
+				AE933C8D22A69B2100CD8C59 /* srtp.h in Headers */,
+				AE933C8E22A69B2100CD8C59 /* ssl.h in Headers */,
+				AE933C8F22A69B2100CD8C59 /* scram-common.h in Headers */,
+				AE933C9022A69B2100CD8C59 /* saslprep.h in Headers */,
+				AE933C9122A69B2100CD8C59 /* ssl2.h in Headers */,
+				AE933C9222A69B2100CD8C59 /* ssl23.h in Headers */,
+				AE933C9322A69B2100CD8C59 /* ssl3.h in Headers */,
+				AE933C9422A69B2100CD8C59 /* stack.h in Headers */,
+				AE933C9522A69B2100CD8C59 /* symhacks.h in Headers */,
+				AE933C9622A69B2100CD8C59 /* tls1.h in Headers */,
+				AE933C9722A69B2100CD8C59 /* ts.h in Headers */,
+				AE933C9822A69B2100CD8C59 /* txt_db.h in Headers */,
+				AE933C9922A69B2100CD8C59 /* ip.h in Headers */,
+				AE933C9A22A69B2100CD8C59 /* ui.h in Headers */,
+				AE933C9B22A69B2100CD8C59 /* fe_memutils.h in Headers */,
+				AE933C9C22A69B2100CD8C59 /* palloc.h in Headers */,
+				AE933C9D22A69B2100CD8C59 /* ui_compat.h in Headers */,
+				AE933C9E22A69B2100CD8C59 /* whrlpool.h in Headers */,
+				AE933C9F22A69B2100CD8C59 /* x509.h in Headers */,
+				AE933CA022A69B2100CD8C59 /* x509_vfy.h in Headers */,
+				AE933CA122A69B2100CD8C59 /* x509v3.h in Headers */,
+				AE933CA222A69B2100CD8C59 /* base64.h in Headers */,
+				AE933CA322A69B2100CD8C59 /* fe-auth.h in Headers */,
+				AE933CA422A69B2100CD8C59 /* libpq-int.h in Headers */,
+				AE933CA522A69B2100CD8C59 /* pqexpbuffer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE933CD122A69BAB00CD8C59 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE933CD222A69BAB00CD8C59 /* postgres_ext.h in Headers */,
+				AE933CD322A69BAB00CD8C59 /* libpq-events.h in Headers */,
+				AE933CD422A69BAB00CD8C59 /* libpq-fe.h in Headers */,
+				AE933CD522A69BAB00CD8C59 /* pg_config_ext.h in Headers */,
+				AE933CD622A69BAB00CD8C59 /* c.h in Headers */,
+				AE933CD722A69BAB00CD8C59 /* getaddrinfo.h in Headers */,
+				AE933CD822A69BAB00CD8C59 /* libpq-fs.h in Headers */,
+				AE933CD922A69BAB00CD8C59 /* md5.h in Headers */,
+				AE933CDA22A69BAB00CD8C59 /* pg_wchar.h in Headers */,
+				AE933CDB22A69BAB00CD8C59 /* pg_config.h in Headers */,
+				AE933CDC22A69BAB00CD8C59 /* pg_config_manual.h in Headers */,
+				AE933CDD22A69BAB00CD8C59 /* pg_config_os.h in Headers */,
+				AE933CDE22A69BAB00CD8C59 /* port.h in Headers */,
+				AE933CDF22A69BAB00CD8C59 /* unicode_norm_table.h in Headers */,
+				AE933CE022A69BAB00CD8C59 /* postgres_fe.h in Headers */,
+				AE933CE122A69BAB00CD8C59 /* libpq-Prefix.pch in Headers */,
+				AE933CE222A69BAB00CD8C59 /* pg_config_paths.h in Headers */,
+				AE933CE322A69BAB00CD8C59 /* aes.h in Headers */,
+				AE933CE422A69BAB00CD8C59 /* asn1.h in Headers */,
+				AE933CE522A69BAB00CD8C59 /* asn1_mac.h in Headers */,
+				AE933CE622A69BAB00CD8C59 /* asn1t.h in Headers */,
+				AE933CE722A69BAB00CD8C59 /* bio.h in Headers */,
+				AE933CE822A69BAB00CD8C59 /* blowfish.h in Headers */,
+				AE933CE922A69BAB00CD8C59 /* bn.h in Headers */,
+				AE933CEA22A69BAB00CD8C59 /* buffer.h in Headers */,
+				AE933CEB22A69BAB00CD8C59 /* camellia.h in Headers */,
+				AE933CEC22A69BAB00CD8C59 /* cast.h in Headers */,
+				AE933CED22A69BAB00CD8C59 /* cmac.h in Headers */,
+				AE933CEE22A69BAB00CD8C59 /* sha2.h in Headers */,
+				AE933CEF22A69BAB00CD8C59 /* cms.h in Headers */,
+				AE933CF022A69BAB00CD8C59 /* comp.h in Headers */,
+				AE933CF122A69BAB00CD8C59 /* conf.h in Headers */,
+				AE933CF222A69BAB00CD8C59 /* conf_api.h in Headers */,
+				AE933CF322A69BAB00CD8C59 /* crypto.h in Headers */,
+				AE933CF422A69BAB00CD8C59 /* des.h in Headers */,
+				AE933CF522A69BAB00CD8C59 /* des_old.h in Headers */,
+				AE933CF622A69BAB00CD8C59 /* dh.h in Headers */,
+				AE933CF722A69BAB00CD8C59 /* dsa.h in Headers */,
+				AE933CF822A69BAB00CD8C59 /* dso.h in Headers */,
+				AE933CF922A69BAB00CD8C59 /* dtls1.h in Headers */,
+				AE933CFA22A69BAB00CD8C59 /* e_os2.h in Headers */,
+				AE933CFB22A69BAB00CD8C59 /* ebcdic.h in Headers */,
+				AE933CFC22A69BAB00CD8C59 /* ec.h in Headers */,
+				AE933CFD22A69BAB00CD8C59 /* ecdh.h in Headers */,
+				AE933CFE22A69BAB00CD8C59 /* ecdsa.h in Headers */,
+				AE933CFF22A69BAB00CD8C59 /* engine.h in Headers */,
+				AE933D0022A69BAB00CD8C59 /* err.h in Headers */,
+				AE933D0122A69BAB00CD8C59 /* evp.h in Headers */,
+				AE933D0222A69BAB00CD8C59 /* hmac.h in Headers */,
+				AE933D0322A69BAB00CD8C59 /* idea.h in Headers */,
+				AE933D0422A69BAB00CD8C59 /* unicode_norm.h in Headers */,
+				AE933D0522A69BAB00CD8C59 /* krb5_asn.h in Headers */,
+				AE933D0622A69BAB00CD8C59 /* kssl.h in Headers */,
+				AE933D0722A69BAB00CD8C59 /* lhash.h in Headers */,
+				AE933D0822A69BAB00CD8C59 /* md4.h in Headers */,
+				AE933D0922A69BAB00CD8C59 /* md5.h in Headers */,
+				AE933D0A22A69BAB00CD8C59 /* mdc2.h in Headers */,
+				AE933D0B22A69BAB00CD8C59 /* modes.h in Headers */,
+				AE933D0C22A69BAB00CD8C59 /* obj_mac.h in Headers */,
+				AE933D0D22A69BAB00CD8C59 /* objects.h in Headers */,
+				AE933D0E22A69BAB00CD8C59 /* ocsp.h in Headers */,
+				AE933D0F22A69BAB00CD8C59 /* opensslconf.h in Headers */,
+				AE933D1022A69BAB00CD8C59 /* opensslv.h in Headers */,
+				AE933D1122A69BAB00CD8C59 /* ossl_typ.h in Headers */,
+				AE933D1222A69BAB00CD8C59 /* pem.h in Headers */,
+				AE933D1322A69BAB00CD8C59 /* pem2.h in Headers */,
+				AE933D1422A69BAB00CD8C59 /* pqcomm.h in Headers */,
+				AE933D1522A69BAB00CD8C59 /* pkcs12.h in Headers */,
+				AE933D1622A69BAB00CD8C59 /* pkcs7.h in Headers */,
+				AE933D1722A69BAB00CD8C59 /* pqueue.h in Headers */,
+				AE933D1822A69BAB00CD8C59 /* rand.h in Headers */,
+				AE933D1922A69BAB00CD8C59 /* rc2.h in Headers */,
+				AE933D1A22A69BAB00CD8C59 /* rc4.h in Headers */,
+				AE933D1B22A69BAB00CD8C59 /* ripemd.h in Headers */,
+				AE933D1C22A69BAB00CD8C59 /* rsa.h in Headers */,
+				AE933D1D22A69BAB00CD8C59 /* safestack.h in Headers */,
+				AE933D1E22A69BAB00CD8C59 /* scram.h in Headers */,
+				AE933D1F22A69BAB00CD8C59 /* seed.h in Headers */,
+				AE933D2022A69BAB00CD8C59 /* sha.h in Headers */,
+				AE933D2122A69BAB00CD8C59 /* srp.h in Headers */,
+				AE933D2222A69BAB00CD8C59 /* srtp.h in Headers */,
+				AE933D2322A69BAB00CD8C59 /* ssl.h in Headers */,
+				AE933D2422A69BAB00CD8C59 /* scram-common.h in Headers */,
+				AE933D2522A69BAB00CD8C59 /* saslprep.h in Headers */,
+				AE933D2622A69BAB00CD8C59 /* ssl2.h in Headers */,
+				AE933D2722A69BAB00CD8C59 /* ssl23.h in Headers */,
+				AE933D2822A69BAB00CD8C59 /* ssl3.h in Headers */,
+				AE933D2922A69BAB00CD8C59 /* stack.h in Headers */,
+				AE933D2A22A69BAB00CD8C59 /* symhacks.h in Headers */,
+				AE933D2B22A69BAB00CD8C59 /* tls1.h in Headers */,
+				AE933D2C22A69BAB00CD8C59 /* ts.h in Headers */,
+				AE933D2D22A69BAB00CD8C59 /* txt_db.h in Headers */,
+				AE933D2E22A69BAB00CD8C59 /* ip.h in Headers */,
+				AE933D2F22A69BAB00CD8C59 /* ui.h in Headers */,
+				AE933D3022A69BAB00CD8C59 /* fe_memutils.h in Headers */,
+				AE933D3122A69BAB00CD8C59 /* palloc.h in Headers */,
+				AE933D3222A69BAB00CD8C59 /* ui_compat.h in Headers */,
+				AE933D3322A69BAB00CD8C59 /* whrlpool.h in Headers */,
+				AE933D3422A69BAB00CD8C59 /* x509.h in Headers */,
+				AE933D3522A69BAB00CD8C59 /* x509_vfy.h in Headers */,
+				AE933D3622A69BAB00CD8C59 /* x509v3.h in Headers */,
+				AE933D3722A69BAB00CD8C59 /* base64.h in Headers */,
+				AE933D3822A69BAB00CD8C59 /* fe-auth.h in Headers */,
+				AE933D3922A69BAB00CD8C59 /* libpq-int.h in Headers */,
+				AE933D3A22A69BAB00CD8C59 /* pqexpbuffer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AECF21C622A6133C0002C0EB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AECF21C722A6133C0002C0EB /* postgres_ext.h in Headers */,
+				AECF21C822A6133C0002C0EB /* libpq-events.h in Headers */,
+				AECF21C922A6133C0002C0EB /* libpq-fe.h in Headers */,
+				AECF21CA22A6133C0002C0EB /* pg_config_ext.h in Headers */,
+				AECF21CB22A6133C0002C0EB /* c.h in Headers */,
+				AECF21CC22A6133C0002C0EB /* getaddrinfo.h in Headers */,
+				AECF21CD22A6133C0002C0EB /* libpq-fs.h in Headers */,
+				AECF21CE22A6133C0002C0EB /* md5.h in Headers */,
+				AECF21CF22A6133C0002C0EB /* pg_wchar.h in Headers */,
+				AECF21D022A6133C0002C0EB /* pg_config.h in Headers */,
+				AECF21D122A6133C0002C0EB /* pg_config_manual.h in Headers */,
+				AECF21D222A6133C0002C0EB /* pg_config_os.h in Headers */,
+				AECF21D322A6133C0002C0EB /* port.h in Headers */,
+				AECF21D422A6133C0002C0EB /* unicode_norm_table.h in Headers */,
+				AECF21D522A6133C0002C0EB /* postgres_fe.h in Headers */,
+				AECF21D622A6133C0002C0EB /* libpq-Prefix.pch in Headers */,
+				AECF21D722A6133C0002C0EB /* pg_config_paths.h in Headers */,
+				AECF21D822A6133C0002C0EB /* aes.h in Headers */,
+				AECF21D922A6133C0002C0EB /* asn1.h in Headers */,
+				AECF21DA22A6133C0002C0EB /* asn1_mac.h in Headers */,
+				AECF21DB22A6133C0002C0EB /* asn1t.h in Headers */,
+				AECF21DC22A6133C0002C0EB /* bio.h in Headers */,
+				AECF21DD22A6133C0002C0EB /* blowfish.h in Headers */,
+				AECF21DE22A6133C0002C0EB /* bn.h in Headers */,
+				AECF21DF22A6133C0002C0EB /* buffer.h in Headers */,
+				AECF21E022A6133C0002C0EB /* camellia.h in Headers */,
+				AECF21E122A6133C0002C0EB /* cast.h in Headers */,
+				AECF21E222A6133C0002C0EB /* cmac.h in Headers */,
+				AECF21E322A6133C0002C0EB /* sha2.h in Headers */,
+				AECF21E422A6133C0002C0EB /* cms.h in Headers */,
+				AECF21E522A6133C0002C0EB /* comp.h in Headers */,
+				AECF21E622A6133C0002C0EB /* conf.h in Headers */,
+				AECF21E722A6133C0002C0EB /* conf_api.h in Headers */,
+				AECF21E822A6133C0002C0EB /* crypto.h in Headers */,
+				AECF21E922A6133C0002C0EB /* des.h in Headers */,
+				AECF21EA22A6133C0002C0EB /* des_old.h in Headers */,
+				AECF21EB22A6133C0002C0EB /* dh.h in Headers */,
+				AECF21EC22A6133C0002C0EB /* dsa.h in Headers */,
+				AECF21ED22A6133C0002C0EB /* dso.h in Headers */,
+				AECF21EE22A6133C0002C0EB /* dtls1.h in Headers */,
+				AECF21EF22A6133C0002C0EB /* e_os2.h in Headers */,
+				AECF21F022A6133C0002C0EB /* ebcdic.h in Headers */,
+				AECF21F122A6133C0002C0EB /* ec.h in Headers */,
+				AECF21F222A6133C0002C0EB /* ecdh.h in Headers */,
+				AECF21F322A6133C0002C0EB /* ecdsa.h in Headers */,
+				AECF21F422A6133C0002C0EB /* engine.h in Headers */,
+				AECF21F522A6133C0002C0EB /* err.h in Headers */,
+				AECF21F622A6133C0002C0EB /* evp.h in Headers */,
+				AECF21F722A6133C0002C0EB /* hmac.h in Headers */,
+				AECF21F822A6133C0002C0EB /* idea.h in Headers */,
+				AECF21F922A6133C0002C0EB /* unicode_norm.h in Headers */,
+				AECF21FA22A6133C0002C0EB /* krb5_asn.h in Headers */,
+				AECF21FB22A6133C0002C0EB /* kssl.h in Headers */,
+				AECF21FC22A6133C0002C0EB /* lhash.h in Headers */,
+				AECF21FD22A6133C0002C0EB /* md4.h in Headers */,
+				AECF21FE22A6133C0002C0EB /* md5.h in Headers */,
+				AECF21FF22A6133C0002C0EB /* mdc2.h in Headers */,
+				AECF220022A6133C0002C0EB /* modes.h in Headers */,
+				AECF220122A6133C0002C0EB /* obj_mac.h in Headers */,
+				AECF220222A6133C0002C0EB /* objects.h in Headers */,
+				AECF220322A6133C0002C0EB /* ocsp.h in Headers */,
+				AECF220422A6133C0002C0EB /* opensslconf.h in Headers */,
+				AECF220522A6133C0002C0EB /* opensslv.h in Headers */,
+				AECF220622A6133C0002C0EB /* ossl_typ.h in Headers */,
+				AECF220722A6133C0002C0EB /* pem.h in Headers */,
+				AECF220822A6133C0002C0EB /* pem2.h in Headers */,
+				AECF220922A6133C0002C0EB /* pqcomm.h in Headers */,
+				AECF220A22A6133C0002C0EB /* pkcs12.h in Headers */,
+				AECF220B22A6133C0002C0EB /* pkcs7.h in Headers */,
+				AECF220C22A6133C0002C0EB /* pqueue.h in Headers */,
+				AECF220D22A6133C0002C0EB /* rand.h in Headers */,
+				AECF220E22A6133C0002C0EB /* rc2.h in Headers */,
+				AECF220F22A6133C0002C0EB /* rc4.h in Headers */,
+				AECF221022A6133C0002C0EB /* ripemd.h in Headers */,
+				AECF221122A6133C0002C0EB /* rsa.h in Headers */,
+				AECF221222A6133C0002C0EB /* safestack.h in Headers */,
+				AECF221322A6133C0002C0EB /* scram.h in Headers */,
+				AECF221422A6133C0002C0EB /* seed.h in Headers */,
+				AECF221522A6133C0002C0EB /* sha.h in Headers */,
+				AECF221622A6133C0002C0EB /* srp.h in Headers */,
+				AECF221722A6133C0002C0EB /* srtp.h in Headers */,
+				AECF221822A6133C0002C0EB /* ssl.h in Headers */,
+				AECF221922A6133C0002C0EB /* scram-common.h in Headers */,
+				AECF221A22A6133C0002C0EB /* saslprep.h in Headers */,
+				AECF221B22A6133C0002C0EB /* ssl2.h in Headers */,
+				AECF221C22A6133C0002C0EB /* ssl23.h in Headers */,
+				AECF221D22A6133C0002C0EB /* ssl3.h in Headers */,
+				AECF221E22A6133C0002C0EB /* stack.h in Headers */,
+				AECF221F22A6133C0002C0EB /* symhacks.h in Headers */,
+				AECF222022A6133C0002C0EB /* tls1.h in Headers */,
+				AECF222122A6133C0002C0EB /* ts.h in Headers */,
+				AECF222222A6133C0002C0EB /* txt_db.h in Headers */,
+				AECF222322A6133C0002C0EB /* ip.h in Headers */,
+				AECF222422A6133C0002C0EB /* ui.h in Headers */,
+				AECF222522A6133C0002C0EB /* fe_memutils.h in Headers */,
+				AECF222622A6133C0002C0EB /* palloc.h in Headers */,
+				AECF222722A6133C0002C0EB /* ui_compat.h in Headers */,
+				AECF222822A6133C0002C0EB /* whrlpool.h in Headers */,
+				AECF222922A6133C0002C0EB /* x509.h in Headers */,
+				AECF222A22A6133C0002C0EB /* x509_vfy.h in Headers */,
+				AECF222B22A6133C0002C0EB /* x509v3.h in Headers */,
+				AECF222C22A6133C0002C0EB /* base64.h in Headers */,
+				AECF222D22A6133C0002C0EB /* fe-auth.h in Headers */,
+				AECF222E22A6133C0002C0EB /* libpq-int.h in Headers */,
+				AECF222F22A6133C0002C0EB /* pqexpbuffer.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		4B4C4CB015040B7500840750 /* libpq */ = {
+		4B4C4CB015040B7500840750 /* libpq_iOS */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 4B4C4CD515040B7500840750 /* Build configuration list for PBXNativeTarget "libpq" */;
+			buildConfigurationList = 4B4C4CD515040B7500840750 /* Build configuration list for PBXNativeTarget "libpq_iOS" */;
 			buildPhases = (
 				4B4C4CAD15040B7500840750 /* Sources */,
 				4B4C4CAE15040B7500840750 /* Frameworks */,
@@ -783,7 +1665,7 @@
 			);
 			dependencies = (
 			);
-			name = libpq;
+			name = libpq_iOS;
 			productName = libpq;
 			productReference = 4B4C4CB115040B7500840750 /* libpq.a */;
 			productType = "com.apple.product-type.library.static";
@@ -806,6 +1688,60 @@
 			productReference = 4BE7E3101DF363C400715BB6 /* libpqTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
+		AE933C1722A69B2100CD8C59 /* libpq_macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE933CA722A69B2100CD8C59 /* Build configuration list for PBXNativeTarget "libpq_macOS" */;
+			buildPhases = (
+				AE933C1822A69B2100CD8C59 /* Sources */,
+				AE933C3922A69B2100CD8C59 /* Frameworks */,
+				AE933C3C22A69B2100CD8C59 /* Headers */,
+				AE933CA622A69B2100CD8C59 /* Prepare Framework */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libpq_macOS;
+			productName = libpq;
+			productReference = AE933CAA22A69B2100CD8C59 /* libpq.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AE933CAC22A69BAB00CD8C59 /* libpq_tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE933D3C22A69BAB00CD8C59 /* Build configuration list for PBXNativeTarget "libpq_tvOS" */;
+			buildPhases = (
+				AE933CAD22A69BAB00CD8C59 /* Sources */,
+				AE933CCE22A69BAB00CD8C59 /* Frameworks */,
+				AE933CD122A69BAB00CD8C59 /* Headers */,
+				AE933D3B22A69BAB00CD8C59 /* Prepare Framework */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libpq_tvOS;
+			productName = libpq;
+			productReference = AE933D3F22A69BAB00CD8C59 /* libpq.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		AECF21A122A6133C0002C0EB /* libpq_watchOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AECF223122A6133C0002C0EB /* Build configuration list for PBXNativeTarget "libpq_watchOS" */;
+			buildPhases = (
+				AECF21A222A6133C0002C0EB /* Sources */,
+				AECF21C322A6133C0002C0EB /* Frameworks */,
+				AECF21C622A6133C0002C0EB /* Headers */,
+				AECF223022A6133C0002C0EB /* Prepare Framework */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = libpq_watchOS;
+			productName = libpq;
+			productReference = AECF223422A6133C0002C0EB /* libpq.a */;
+			productType = "com.apple.product-type.library.static";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -827,6 +1763,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = 4B4C4CA615040B7500840750;
@@ -834,9 +1771,14 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				4B4C4CB015040B7500840750 /* libpq */,
-				4B4C4CDE150423F100840750 /* Framework */,
+				4B4C4CB015040B7500840750 /* libpq_iOS */,
+				4B4C4CDE150423F100840750 /* Framework_iOS */,
 				4BE7E30F1DF363C400715BB6 /* libpqTests */,
+				AECF21A122A6133C0002C0EB /* libpq_watchOS */,
+				AECF223522A613500002C0EB /* Framework_watchOS */,
+				AE933C1722A69B2100CD8C59 /* libpq_macOS */,
+				AE933CAC22A69BAB00CD8C59 /* libpq_tvOS */,
+				AE933D4122A69C0500CD8C59 /* Framework_tvOS */,
 			);
 		};
 /* End PBXProject section */
@@ -864,7 +1806,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n\n# Link the \"Current\" version to \"${FRAMEWORK_VERSION}\"\nln -sfh ${FRAMEWORK_VERSION} \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/Current\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/libpq.framework/Headers\"\nln -sfh \"Versions/Current/libpq\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/libpq\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\ncp -a \"${BUILT_PRODUCTS_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"";
+			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n\n# Link the \"Current\" version to \"${FRAMEWORK_VERSION}\"\nln -sfh ${FRAMEWORK_VERSION} \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/Current\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/libpq.framework/Headers\"\nln -sfh \"Versions/Current/libpq\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/libpq\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\ncp -a \"${BUILT_PRODUCTS_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n";
 		};
 		4B4C4CE4150423FF00840750 /* Build Framework */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -878,7 +1820,77 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=\"libpq\"\nSF_EXECUTABLE_PATH=\"libpq.a\"\nSF_WRAPPER_NAME=\"${SF_TARGET_NAME}.framework\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nSF_OTHER_PLATFORM=iphonesimulator\nelse\nSF_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n# Build the other platform.\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nlipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/${FRAMEWORK_VERSION}/${SF_TARGET_NAME}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/${FRAMEWORK_VERSION}/${SF_TARGET_NAME}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/${FRAMEWORK_VERSION}/${SF_TARGET_NAME}\"";
+			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=\"libpq_iOS\"\nSF_PRODUCT_NAME=\"libpq\"\nSF_EXECUTABLE_PATH=\"libpq.a\"\nSF_WRAPPER_NAME=\"${SF_PRODUCT_NAME}.framework\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nSF_OTHER_PLATFORM=iphonesimulator\nelse\nSF_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n# Build the other platform.\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}/DependentBuilds\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nlipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/${FRAMEWORK_VERSION}/${SF_PRODUCT_NAME}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/${FRAMEWORK_VERSION}/${SF_PRODUCT_NAME}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/${FRAMEWORK_VERSION}/${SF_PRODUCT_NAME}\"\n";
+		};
+		AE933CA622A69B2100CD8C59 /* Prepare Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Prepare Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n\n# Link the \"Current\" version to \"${FRAMEWORK_VERSION}\"\nln -sfh ${FRAMEWORK_VERSION} \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/Current\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/libpq.framework/Headers\"\nln -sfh \"Versions/Current/libpq\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/libpq\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\ncp -a \"${BUILT_PRODUCTS_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n";
+		};
+		AE933D3B22A69BAB00CD8C59 /* Prepare Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Prepare Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n\n# Link the \"Current\" version to \"${FRAMEWORK_VERSION}\"\nln -sfh ${FRAMEWORK_VERSION} \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/Current\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/libpq.framework/Headers\"\nln -sfh \"Versions/Current/libpq\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/libpq\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\ncp -a \"${BUILT_PRODUCTS_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n";
+		};
+		AE933D4422A69C0500CD8C59 /* Build Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=\"libpq_iOS\"\nSF_PRODUCT_NAME=\"libpq\"\nSF_EXECUTABLE_PATH=\"libpq.a\"\nSF_WRAPPER_NAME=\"${SF_PRODUCT_NAME}.framework\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nSF_OTHER_PLATFORM=iphonesimulator\nelse\nSF_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n# Build the other platform.\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}/DependentBuilds\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nlipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/${FRAMEWORK_VERSION}/${SF_PRODUCT_NAME}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/${FRAMEWORK_VERSION}/${SF_PRODUCT_NAME}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/${FRAMEWORK_VERSION}/${SF_PRODUCT_NAME}\"\n";
+		};
+		AECF223022A6133C0002C0EB /* Prepare Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Prepare Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n\n# Link the \"Current\" version to \"${FRAMEWORK_VERSION}\"\nln -sfh ${FRAMEWORK_VERSION} \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/Current\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/libpq.framework/Headers\"\nln -sfh \"Versions/Current/libpq\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/libpq\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\ncp -a \"${BUILT_PRODUCTS_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n";
+		};
+		AECF223822A613500002C0EB /* Build Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=\"libpq_watchOS\"\nSF_PRODUCT_NAME=\"libpq\"\nSF_EXECUTABLE_PATH=\"libpq.a\"\nSF_WRAPPER_NAME=\"${SF_PRODUCT_NAME}.framework\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"iphoneos\" ]]\nthen\nSF_OTHER_PLATFORM=iphonesimulator\nelse\nSF_OTHER_PLATFORM=iphoneos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n# Build the other platform.\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}/DependentBuilds\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nlipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/${FRAMEWORK_VERSION}/${SF_PRODUCT_NAME}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/${FRAMEWORK_VERSION}/${SF_PRODUCT_NAME}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/${FRAMEWORK_VERSION}/${SF_PRODUCT_NAME}\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -930,18 +1942,145 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		AE933C1822A69B2100CD8C59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE933C1922A69B2100CD8C59 /* pgstrcasecmp.c in Sources */,
+				AE933C1A22A69B2100CD8C59 /* thread.c in Sources */,
+				AE933C1B22A69B2100CD8C59 /* noblock.c in Sources */,
+				AE933C1C22A69B2100CD8C59 /* fe-auth.c in Sources */,
+				AE933C1D22A69B2100CD8C59 /* encnames.c in Sources */,
+				AE933C1E22A69B2100CD8C59 /* erand48.c in Sources */,
+				AE933C1F22A69B2100CD8C59 /* fe-connect.c in Sources */,
+				AE933C2022A69B2100CD8C59 /* fe-exec.c in Sources */,
+				AE933C2122A69B2100CD8C59 /* pg_strong_random.c in Sources */,
+				AE933C2222A69B2100CD8C59 /* wchar.c in Sources */,
+				AE933C2322A69B2100CD8C59 /* sha2_openssl.c in Sources */,
+				AE933C2422A69B2100CD8C59 /* base64.c in Sources */,
+				AE933C2522A69B2100CD8C59 /* fe-lobj.c in Sources */,
+				AE933C2622A69B2100CD8C59 /* unicode_norm.c in Sources */,
+				AE933C2722A69B2100CD8C59 /* scram-common.c in Sources */,
+				AE933C2822A69B2100CD8C59 /* fe-misc.c in Sources */,
+				AE933C2922A69B2100CD8C59 /* fe-print.c in Sources */,
+				AE933C2A22A69B2100CD8C59 /* fe-protocol2.c in Sources */,
+				AE933C2B22A69B2100CD8C59 /* fe-protocol3.c in Sources */,
+				AE933C2C22A69B2100CD8C59 /* fe-secure.c in Sources */,
+				AE933C2D22A69B2100CD8C59 /* pqsignal.c in Sources */,
+				AE933C2E22A69B2100CD8C59 /* fe_memutils.c in Sources */,
+				AE933C2F22A69B2100CD8C59 /* ip.c in Sources */,
+				AE933C3022A69B2100CD8C59 /* fe-secure-openssl.c in Sources */,
+				AE933C3122A69B2100CD8C59 /* chklocale.c in Sources */,
+				AE933C3222A69B2100CD8C59 /* libpq-events.c in Sources */,
+				AE933C3322A69B2100CD8C59 /* saslprep.c in Sources */,
+				AE933C3422A69B2100CD8C59 /* pqexpbuffer.c in Sources */,
+				AE933C3522A69B2100CD8C59 /* md5.c in Sources */,
+				AE933C3622A69B2100CD8C59 /* inet_net_ntop.c in Sources */,
+				AE933C3722A69B2100CD8C59 /* fe-auth-scram.c in Sources */,
+				AE933C3822A69B2100CD8C59 /* snprintf.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE933CAD22A69BAB00CD8C59 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE933CAE22A69BAB00CD8C59 /* pgstrcasecmp.c in Sources */,
+				AE933CAF22A69BAB00CD8C59 /* thread.c in Sources */,
+				AE933CB022A69BAB00CD8C59 /* noblock.c in Sources */,
+				AE933CB122A69BAB00CD8C59 /* fe-auth.c in Sources */,
+				AE933CB222A69BAB00CD8C59 /* encnames.c in Sources */,
+				AE933CB322A69BAB00CD8C59 /* erand48.c in Sources */,
+				AE933CB422A69BAB00CD8C59 /* fe-connect.c in Sources */,
+				AE933CB522A69BAB00CD8C59 /* fe-exec.c in Sources */,
+				AE933CB622A69BAB00CD8C59 /* pg_strong_random.c in Sources */,
+				AE933CB722A69BAB00CD8C59 /* wchar.c in Sources */,
+				AE933CB822A69BAB00CD8C59 /* sha2_openssl.c in Sources */,
+				AE933CB922A69BAB00CD8C59 /* base64.c in Sources */,
+				AE933CBA22A69BAB00CD8C59 /* fe-lobj.c in Sources */,
+				AE933CBB22A69BAB00CD8C59 /* unicode_norm.c in Sources */,
+				AE933CBC22A69BAB00CD8C59 /* scram-common.c in Sources */,
+				AE933CBD22A69BAB00CD8C59 /* fe-misc.c in Sources */,
+				AE933CBE22A69BAB00CD8C59 /* fe-print.c in Sources */,
+				AE933CBF22A69BAB00CD8C59 /* fe-protocol2.c in Sources */,
+				AE933CC022A69BAB00CD8C59 /* fe-protocol3.c in Sources */,
+				AE933CC122A69BAB00CD8C59 /* fe-secure.c in Sources */,
+				AE933CC222A69BAB00CD8C59 /* pqsignal.c in Sources */,
+				AE933CC322A69BAB00CD8C59 /* fe_memutils.c in Sources */,
+				AE933CC422A69BAB00CD8C59 /* ip.c in Sources */,
+				AE933CC522A69BAB00CD8C59 /* fe-secure-openssl.c in Sources */,
+				AE933CC622A69BAB00CD8C59 /* chklocale.c in Sources */,
+				AE933CC722A69BAB00CD8C59 /* libpq-events.c in Sources */,
+				AE933CC822A69BAB00CD8C59 /* saslprep.c in Sources */,
+				AE933CC922A69BAB00CD8C59 /* pqexpbuffer.c in Sources */,
+				AE933CCA22A69BAB00CD8C59 /* md5.c in Sources */,
+				AE933CCB22A69BAB00CD8C59 /* inet_net_ntop.c in Sources */,
+				AE933CCC22A69BAB00CD8C59 /* fe-auth-scram.c in Sources */,
+				AE933CCD22A69BAB00CD8C59 /* snprintf.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AECF21A222A6133C0002C0EB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AECF21A322A6133C0002C0EB /* pgstrcasecmp.c in Sources */,
+				AECF21A422A6133C0002C0EB /* thread.c in Sources */,
+				AECF21A522A6133C0002C0EB /* noblock.c in Sources */,
+				AECF21A622A6133C0002C0EB /* fe-auth.c in Sources */,
+				AECF21A722A6133C0002C0EB /* encnames.c in Sources */,
+				AECF21A822A6133C0002C0EB /* erand48.c in Sources */,
+				AECF21A922A6133C0002C0EB /* fe-connect.c in Sources */,
+				AECF21AA22A6133C0002C0EB /* fe-exec.c in Sources */,
+				AECF21AB22A6133C0002C0EB /* pg_strong_random.c in Sources */,
+				AECF21AC22A6133C0002C0EB /* wchar.c in Sources */,
+				AECF21AD22A6133C0002C0EB /* sha2_openssl.c in Sources */,
+				AECF21AE22A6133C0002C0EB /* base64.c in Sources */,
+				AECF21AF22A6133C0002C0EB /* fe-lobj.c in Sources */,
+				AECF21B022A6133C0002C0EB /* unicode_norm.c in Sources */,
+				AECF21B122A6133C0002C0EB /* scram-common.c in Sources */,
+				AECF21B222A6133C0002C0EB /* fe-misc.c in Sources */,
+				AECF21B322A6133C0002C0EB /* fe-print.c in Sources */,
+				AECF21B422A6133C0002C0EB /* fe-protocol2.c in Sources */,
+				AECF21B522A6133C0002C0EB /* fe-protocol3.c in Sources */,
+				AECF21B622A6133C0002C0EB /* fe-secure.c in Sources */,
+				AECF21B722A6133C0002C0EB /* pqsignal.c in Sources */,
+				AECF21B822A6133C0002C0EB /* fe_memutils.c in Sources */,
+				AECF21B922A6133C0002C0EB /* ip.c in Sources */,
+				AECF21BA22A6133C0002C0EB /* fe-secure-openssl.c in Sources */,
+				AECF21BB22A6133C0002C0EB /* chklocale.c in Sources */,
+				AECF21BC22A6133C0002C0EB /* libpq-events.c in Sources */,
+				AECF21BD22A6133C0002C0EB /* saslprep.c in Sources */,
+				AECF21BE22A6133C0002C0EB /* pqexpbuffer.c in Sources */,
+				AECF21BF22A6133C0002C0EB /* md5.c in Sources */,
+				AECF21C022A6133C0002C0EB /* inet_net_ntop.c in Sources */,
+				AECF21C122A6133C0002C0EB /* fe-auth-scram.c in Sources */,
+				AECF21C222A6133C0002C0EB /* snprintf.c in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
 		4B4C4CE3150423FC00840750 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4B4C4CB015040B7500840750 /* libpq */;
+			target = 4B4C4CB015040B7500840750 /* libpq_iOS */;
 			targetProxy = 4B4C4CE2150423FC00840750 /* PBXContainerItemProxy */;
 		};
 		4BE7E3171DF363C400715BB6 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 4B4C4CB015040B7500840750 /* libpq */;
+			target = 4B4C4CB015040B7500840750 /* libpq_iOS */;
 			targetProxy = 4BE7E3161DF363C400715BB6 /* PBXContainerItemProxy */;
+		};
+		AE933D4222A69C0500CD8C59 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4B4C4CB015040B7500840750 /* libpq_iOS */;
+			targetProxy = AE933D4322A69C0500CD8C59 /* PBXContainerItemProxy */;
+		};
+		AECF223D22A613C00002C0EB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AECF21A122A6133C0002C0EB /* libpq_watchOS */;
+			targetProxy = AECF223C22A613C00002C0EB /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1060,12 +2199,13 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/libpq.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/openssl_frameworks_1_1/iOS",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/libpq-Prefix.pch";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/lib\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = pq;
 				PUBLIC_HEADERS_FOLDER_PATH = Headers;
@@ -1082,12 +2222,13 @@
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = NO;
 				DSTROOT = /tmp/libpq.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/openssl_frameworks_1_1/iOS",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/libpq-Prefix.pch";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"\"$(SRCROOT)/lib\"",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_NAME = pq;
 				PUBLIC_HEADERS_FOLDER_PATH = Headers;
@@ -1127,6 +2268,13 @@
 				CLANG_WARN_SUSPICIOUS_MOVES = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEBUG_INFORMATION_FORMAT = dwarf;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/openssl_frameworks_1_1/macOS",
+					"$(PROJECT_DIR)/openssl_frameworks_1_1/watchOS",
+					"$(PROJECT_DIR)/openssl_frameworks_1_1/iOS",
+					"$(PROJECT_DIR)/openssl_frameworks_1_1/tvOS",
+				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = libpqTests/Info.plist;
@@ -1158,6 +2306,13 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/openssl_frameworks_1_1/macOS",
+					"$(PROJECT_DIR)/openssl_frameworks_1_1/watchOS",
+					"$(PROJECT_DIR)/openssl_frameworks_1_1/iOS",
+					"$(PROJECT_DIR)/openssl_frameworks_1_1/tvOS",
+				);
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				INFOPLIST_FILE = libpqTests/Info.plist;
@@ -1173,6 +2328,192 @@
 			};
 			name = Release;
 		};
+		AE933CA822A69B2100CD8C59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				DSTROOT = /tmp/libpq.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/openssl_frameworks_1_1/macOS",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "src/libpq-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_MODULE_NAME = pq;
+				PRODUCT_NAME = pq;
+				PUBLIC_HEADERS_FOLDER_PATH = Headers;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+				"WARNING_CFLAGS[arch=*]" = "-Wno-conversion";
+			};
+			name = Debug;
+		};
+		AE933CA922A69B2100CD8C59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				DSTROOT = /tmp/libpq.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/openssl_frameworks_1_1/macOS",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "src/libpq-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_MODULE_NAME = pq;
+				PRODUCT_NAME = pq;
+				PUBLIC_HEADERS_FOLDER_PATH = Headers;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+				"WARNING_CFLAGS[arch=*]" = "-Wno-conversion";
+			};
+			name = Release;
+		};
+		AE933D3D22A69BAB00CD8C59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				DSTROOT = /tmp/libpq.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/openssl_frameworks_1_1/tvOS",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "src/libpq-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_MODULE_NAME = pq;
+				PRODUCT_NAME = pq;
+				PUBLIC_HEADERS_FOLDER_PATH = Headers;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+				"WARNING_CFLAGS[arch=*]" = "-Wno-conversion";
+			};
+			name = Debug;
+		};
+		AE933D3E22A69BAB00CD8C59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				DSTROOT = /tmp/libpq.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/openssl_frameworks_1_1/tvOS",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "src/libpq-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_MODULE_NAME = pq;
+				PRODUCT_NAME = pq;
+				PUBLIC_HEADERS_FOLDER_PATH = Headers;
+				SDKROOT = appletvos;
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+				"WARNING_CFLAGS[arch=*]" = "-Wno-conversion";
+			};
+			name = Release;
+		};
+		AE933D4622A69C0500CD8C59 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+			};
+			name = Debug;
+		};
+		AE933D4722A69C0500CD8C59 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = appletvos;
+			};
+			name = Release;
+		};
+		AECF223222A6133C0002C0EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				DSTROOT = /tmp/libpq.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/openssl_frameworks_1_1/watchOS",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "src/libpq-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_MODULE_NAME = pq;
+				PRODUCT_NAME = pq;
+				PUBLIC_HEADERS_FOLDER_PATH = Headers;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+				"WARNING_CFLAGS[arch=*]" = "-Wno-conversion";
+			};
+			name = Debug;
+		};
+		AECF223322A6133C0002C0EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = NO;
+				DSTROOT = /tmp/libpq.dst;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/openssl_frameworks_1_1/watchOS",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "src/libpq-Prefix.pch";
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_MODULE_NAME = pq;
+				PRODUCT_NAME = pq;
+				PUBLIC_HEADERS_FOLDER_PATH = Headers;
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRIP_STYLE = "non-global";
+				"WARNING_CFLAGS[arch=*]" = "-Wno-conversion";
+			};
+			name = Release;
+		};
+		AECF223A22A613500002C0EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+			};
+			name = Debug;
+		};
+		AECF223B22A613500002C0EB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -1185,7 +2526,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4B4C4CD515040B7500840750 /* Build configuration list for PBXNativeTarget "libpq" */ = {
+		4B4C4CD515040B7500840750 /* Build configuration list for PBXNativeTarget "libpq_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4B4C4CD615040B7500840750 /* Debug */,
@@ -1194,7 +2535,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		4B4C4CDF150423F100840750 /* Build configuration list for PBXAggregateTarget "Framework" */ = {
+		4B4C4CDF150423F100840750 /* Build configuration list for PBXAggregateTarget "Framework_iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4B4C4CE0150423F100840750 /* Debug */,
@@ -1208,6 +2549,51 @@
 			buildConfigurations = (
 				4BE7E3191DF363C400715BB6 /* Debug */,
 				4BE7E31A1DF363C400715BB6 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE933CA722A69B2100CD8C59 /* Build configuration list for PBXNativeTarget "libpq_macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE933CA822A69B2100CD8C59 /* Debug */,
+				AE933CA922A69B2100CD8C59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE933D3C22A69BAB00CD8C59 /* Build configuration list for PBXNativeTarget "libpq_tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE933D3D22A69BAB00CD8C59 /* Debug */,
+				AE933D3E22A69BAB00CD8C59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE933D4522A69C0500CD8C59 /* Build configuration list for PBXAggregateTarget "Framework_tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE933D4622A69C0500CD8C59 /* Debug */,
+				AE933D4722A69C0500CD8C59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AECF223122A6133C0002C0EB /* Build configuration list for PBXNativeTarget "libpq_watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AECF223222A6133C0002C0EB /* Debug */,
+				AECF223322A6133C0002C0EB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AECF223922A613500002C0EB /* Build configuration list for PBXAggregateTarget "Framework_watchOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AECF223A22A613500002C0EB /* Debug */,
+				AECF223B22A613500002C0EB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
