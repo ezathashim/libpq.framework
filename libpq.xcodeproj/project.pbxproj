@@ -788,10 +788,9 @@
 		4BE930F215057FE60021F063 /* libpq-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = "libpq-Prefix.pch"; path = "src/libpq-Prefix.pch"; sourceTree = "<group>"; };
 		4BE930F415057FE60021F063 /* pg_config_paths.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = pg_config_paths.h; sourceTree = "<group>"; };
 		76F0F9551FA77EBA002626FA /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		AE25AAEE22A6CDA8008DCF41 /* OpenSSL ReadMe.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = "OpenSSL ReadMe.rtf"; sourceTree = "<group>"; };
 		AE933CAA22A69B2100CD8C59 /* libpq.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libpq.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		AE933D3F22A69BAB00CD8C59 /* libpq.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libpq.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		AE9CEB3522A61B3200260B93 /* libcrypto-WatchOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libcrypto-WatchOS.a"; sourceTree = "<group>"; };
-		AE9CEB3622A61B3200260B93 /* libssl-WatchOS.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libssl-WatchOS.a"; sourceTree = "<group>"; };
 		AECF219522A5EFA60002C0EB /* openssl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = openssl.framework; sourceTree = "<group>"; };
 		AECF219722A5EFA60002C0EB /* openssl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = openssl.framework; sourceTree = "<group>"; };
 		AECF219922A5EFA60002C0EB /* openssl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = openssl.framework; sourceTree = "<group>"; };
@@ -855,7 +854,7 @@
 			isa = PBXGroup;
 			children = (
 				76F0F9551FA77EBA002626FA /* README.md */,
-				AECF219322A5EFA60002C0EB /* openssl_frameworks_1_1 */,
+				AECF219322A5EFA60002C0EB /* OpenSSL_Frameworks */,
 				4BE930C315057FE60021F063 /* src */,
 				4BE7E3111DF363C400715BB6 /* libpqTests */,
 				4B4C4CB315040B7500840750 /* Frameworks */,
@@ -1153,15 +1152,16 @@
 			path = port;
 			sourceTree = "<group>";
 		};
-		AECF219322A5EFA60002C0EB /* openssl_frameworks_1_1 */ = {
+		AECF219322A5EFA60002C0EB /* OpenSSL_Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AE25AAEE22A6CDA8008DCF41 /* OpenSSL ReadMe.rtf */,
 				AECF219422A5EFA60002C0EB /* macOS */,
 				AECF219622A5EFA60002C0EB /* watchOS */,
 				AECF219822A5EFA60002C0EB /* iOS */,
 				AECF219A22A5EFA60002C0EB /* tvOS */,
 			);
-			path = openssl_frameworks_1_1;
+			path = OpenSSL_Frameworks;
 			sourceTree = "<group>";
 		};
 		AECF219422A5EFA60002C0EB /* macOS */ = {
@@ -1175,8 +1175,6 @@
 		AECF219622A5EFA60002C0EB /* watchOS */ = {
 			isa = PBXGroup;
 			children = (
-				AE9CEB3522A61B3200260B93 /* libcrypto-WatchOS.a */,
-				AE9CEB3622A61B3200260B93 /* libssl-WatchOS.a */,
 				AECF219722A5EFA60002C0EB /* openssl.framework */,
 			);
 			path = watchOS;
@@ -2201,7 +2199,7 @@
 				DSTROOT = /tmp/libpq.dst;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/openssl_frameworks_1_1/iOS",
+					"$(PROJECT_DIR)/OpenSSL_Frameworks/iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/libpq-Prefix.pch";
@@ -2224,7 +2222,7 @@
 				DSTROOT = /tmp/libpq.dst;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/openssl_frameworks_1_1/iOS",
+					"$(PROJECT_DIR)/OpenSSL_Frameworks/iOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/libpq-Prefix.pch";
@@ -2337,7 +2335,7 @@
 				DSTROOT = /tmp/libpq.dst;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/openssl_frameworks_1_1/macOS",
+					"$(PROJECT_DIR)/OpenSSL_Frameworks/macOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/libpq-Prefix.pch";
@@ -2362,7 +2360,7 @@
 				DSTROOT = /tmp/libpq.dst;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/openssl_frameworks_1_1/macOS",
+					"$(PROJECT_DIR)/OpenSSL_Frameworks/macOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/libpq-Prefix.pch";
@@ -2387,7 +2385,7 @@
 				DSTROOT = /tmp/libpq.dst;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/openssl_frameworks_1_1/tvOS",
+					"$(PROJECT_DIR)/OpenSSL_Frameworks/tvOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/libpq-Prefix.pch";
@@ -2412,7 +2410,7 @@
 				DSTROOT = /tmp/libpq.dst;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/openssl_frameworks_1_1/tvOS",
+					"$(PROJECT_DIR)/OpenSSL_Frameworks/tvOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/libpq-Prefix.pch";
@@ -2455,7 +2453,7 @@
 				DSTROOT = /tmp/libpq.dst;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/openssl_frameworks_1_1/watchOS",
+					"$(PROJECT_DIR)/OpenSSL_Frameworks/watchOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/libpq-Prefix.pch";
@@ -2480,7 +2478,7 @@
 				DSTROOT = /tmp/libpq.dst;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
-					"$(PROJECT_DIR)/openssl_frameworks_1_1/watchOS",
+					"$(PROJECT_DIR)/OpenSSL_Frameworks/watchOS",
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/libpq-Prefix.pch";
