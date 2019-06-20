@@ -22,6 +22,8 @@
 # include <openssl/opensslconf_watchos_armv7k.h>
 #elif TARGET_OS_WATCHOS && TARGET_OS_EMBEDDED && TARGET_CPU_ARM64_32
 # include <openssl/opensslconf_watchos_arm64_32.h>
+#elif TARGET_OS_SIMULATOR && TARGET_CPU_X86 || TARGET_OS_EMBEDDED
+# include <openssl/opensslconf_watchos_i386.h>
 #else
 # error Unable to determine target or target not included in OpenSSL build
 #endif
