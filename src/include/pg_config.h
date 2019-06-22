@@ -733,7 +733,7 @@
 #define PACKAGE_VERSION "10.0"
 
 /* Define to the name of a signed 128-bit integer type. */
-#define PG_INT128_TYPE __int128
+//#define PG_INT128_TYPE __int128
 
 /* Define to the name of a signed 64-bit integer type. */
 #define PG_INT64_TYPE long int
