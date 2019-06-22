@@ -26,7 +26,7 @@
 				AE933D4422A69C0500CD8C59 /* Build Framework */,
 			);
 			dependencies = (
-				AECCF67D22BC5C06008FC344 /* PBXTargetDependency */,
+				AE933D4222A69C0500CD8C59 /* PBXTargetDependency */,
 			);
 			name = Framework_tvOS;
 			productName = Framework;
@@ -625,12 +625,12 @@
 			remoteGlobalIDString = 4B4C4CB015040B7500840750;
 			remoteInfo = libpq;
 		};
-		AECCF67C22BC5C06008FC344 /* PBXContainerItemProxy */ = {
+		AE933D4322A69C0500CD8C59 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 4B4C4CA815040B7500840750 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = AE933CAC22A69BAB00CD8C59;
-			remoteInfo = libpq_tvOS;
+			remoteGlobalIDString = 4B4C4CB015040B7500840750;
+			remoteInfo = libpq;
 		};
 		AECF223C22A613C00002C0EB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -2070,10 +2070,10 @@
 			target = 4B4C4CB015040B7500840750 /* libpq_iOS */;
 			targetProxy = 4BE7E3161DF363C400715BB6 /* PBXContainerItemProxy */;
 		};
-		AECCF67D22BC5C06008FC344 /* PBXTargetDependency */ = {
+		AE933D4222A69C0500CD8C59 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = AE933CAC22A69BAB00CD8C59 /* libpq_tvOS */;
-			targetProxy = AECCF67C22BC5C06008FC344 /* PBXContainerItemProxy */;
+			target = 4B4C4CB015040B7500840750 /* libpq_iOS */;
+			targetProxy = AE933D4322A69C0500CD8C59 /* PBXContainerItemProxy */;
 		};
 		AECF223D22A613C00002C0EB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
