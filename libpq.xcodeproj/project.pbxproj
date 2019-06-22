@@ -1769,12 +1769,12 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				AE933C1722A69B2100CD8C59 /* libpq_macOS */,
 				4B4C4CB015040B7500840750 /* libpq_iOS */,
 				4B4C4CDE150423F100840750 /* Framework_iOS */,
 				4BE7E30F1DF363C400715BB6 /* libpqTests */,
 				AECF21A122A6133C0002C0EB /* libpq_watchOS */,
 				AECF223522A613500002C0EB /* Framework_watchOS */,
-				AE933C1722A69B2100CD8C59 /* libpq_macOS */,
 				AE933CAC22A69BAB00CD8C59 /* libpq_tvOS */,
 				AE933D4122A69C0500CD8C59 /* Framework_tvOS */,
 			);
