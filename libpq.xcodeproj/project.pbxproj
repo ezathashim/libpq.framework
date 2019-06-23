@@ -31,6 +31,18 @@
 			name = Framework_tvOS;
 			productName = Framework;
 		};
+		AEBC9CE522C01A9D00F72F5D /* Framework_macOS */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = AEBC9CE922C01A9D00F72F5D /* Build configuration list for PBXAggregateTarget "Framework_macOS" */;
+			buildPhases = (
+				AEBC9CE822C01A9D00F72F5D /* Build Framework */,
+			);
+			dependencies = (
+				AEBC9CED22C01AD800F72F5D /* PBXTargetDependency */,
+			);
+			name = Framework_macOS;
+			productName = Framework;
+		};
 		AECF223522A613500002C0EB /* Framework_watchOS */ = {
 			isa = PBXAggregateTarget;
 			buildConfigurationList = AECF223922A613500002C0EB /* Build configuration list for PBXAggregateTarget "Framework_watchOS" */;
@@ -631,6 +643,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 4B4C4CB015040B7500840750;
 			remoteInfo = libpq;
+		};
+		AEBC9CEC22C01AD800F72F5D /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4B4C4CA815040B7500840750 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE933C1722A69B2100CD8C59;
+			remoteInfo = libpq_macOS;
 		};
 		AECF223C22A613C00002C0EB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -1770,6 +1789,7 @@
 			projectRoot = "";
 			targets = (
 				AE933C1722A69B2100CD8C59 /* libpq_macOS */,
+				AEBC9CE522C01A9D00F72F5D /* Framework_macOS */,
 				4B4C4CB015040B7500840750 /* libpq_iOS */,
 				4B4C4CDE150423F100840750 /* Framework_iOS */,
 				4BE7E30F1DF363C400715BB6 /* libpqTests */,
@@ -1861,6 +1881,20 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=\"libpq_tvOS\"\nSF_PRODUCT_NAME=\"libpq\"\nSF_EXECUTABLE_PATH=\"libpq.a\"\nSF_WRAPPER_NAME=\"${SF_PRODUCT_NAME}.framework\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SF_SDK_PLATFORM\" = \"appletvos\" ]]\nthen\nSF_OTHER_PLATFORM=appletvsimulator\nelse\nSF_OTHER_PLATFORM=appletvos\nfi\n\nif [[ \"$BUILT_PRODUCTS_DIR\" =~ (.*)$SF_SDK_PLATFORM$ ]]\nthen\nSF_OTHER_BUILT_PRODUCTS_DIR=\"${BASH_REMATCH[1]}${SF_OTHER_PLATFORM}\"\nelse\necho \"Could not find platform name from build products directory: $BUILT_PRODUCTS_DIR\"\nexit 1\nfi\n\n# Build the other platform.\nxcodebuild -project \"${PROJECT_FILE_PATH}\" -target \"${TARGET_NAME}\" -configuration \"${CONFIGURATION}\" -sdk ${SF_OTHER_PLATFORM}${SF_SDK_VERSION} BUILD_DIR=\"${BUILD_DIR}\" OBJROOT=\"${OBJROOT}/DependentBuilds\" BUILD_ROOT=\"${BUILD_ROOT}\" SYMROOT=\"${SYMROOT}\" $ACTION\n\n# Smash the two static libraries into one fat binary and store it in the .framework\nlipo -create \"${BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_EXECUTABLE_PATH}\" -output \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/${FRAMEWORK_VERSION}/${SF_PRODUCT_NAME}\"\n\n# Copy the binary to the other architecture folder to have a complete framework in both.\ncp -a \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/${FRAMEWORK_VERSION}/${SF_PRODUCT_NAME}\" \"${SF_OTHER_BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}/Versions/${FRAMEWORK_VERSION}/${SF_PRODUCT_NAME}\"\n\n\n# Copy the framework to the Project Directory\nditto \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}\" \"${SRCROOT}/Frameworks/tvOS/${SF_WRAPPER_NAME}\"\n";
+		};
+		AEBC9CE822C01A9D00F72F5D /* Build Framework */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Build Framework";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "set -e\nset +u\n# Avoid recursively calling this script.\nif [[ $SF_MASTER_SCRIPT_RUNNING ]]\nthen\nexit 0\nfi\nset -u\nexport SF_MASTER_SCRIPT_RUNNING=1\n\nSF_TARGET_NAME=\"libpq_macOS\"\nSF_PRODUCT_NAME=\"libpq\"\nSF_EXECUTABLE_PATH=\"libpq.a\"\nSF_WRAPPER_NAME=\"${SF_PRODUCT_NAME}.framework\"\n\n# The following conditionals come from\n# https://github.com/kstenerud/iOS-Universal-Framework\n\nif [[ \"$SDK_NAME\" =~ ([A-Za-z]+) ]]\nthen\nSF_SDK_PLATFORM=${BASH_REMATCH[1]}\nelse\necho \"Could not find platform name from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\nif [[ \"$SDK_NAME\" =~ ([0-9]+.*$) ]]\nthen\nSF_SDK_VERSION=${BASH_REMATCH[1]}\nelse\necho \"Could not find sdk version from SDK_NAME: $SDK_NAME\"\nexit 1\nfi\n\n\n# Copy the framework to the Project Directory\nditto \"${BUILT_PRODUCTS_DIR}/${SF_WRAPPER_NAME}\" \"${SRCROOT}/Frameworks/macOS/${SF_WRAPPER_NAME}\"\n";
 		};
 		AECF223022A6133C0002C0EB /* Prepare Framework */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2074,6 +2108,11 @@
 			isa = PBXTargetDependency;
 			target = 4B4C4CB015040B7500840750 /* libpq_iOS */;
 			targetProxy = AE933D4322A69C0500CD8C59 /* PBXContainerItemProxy */;
+		};
+		AEBC9CED22C01AD800F72F5D /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE933C1722A69B2100CD8C59 /* libpq_macOS */;
+			targetProxy = AEBC9CEC22C01AD800F72F5D /* PBXContainerItemProxy */;
 		};
 		AECF223D22A613C00002C0EB /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -2444,6 +2483,22 @@
 			};
 			name = Release;
 		};
+		AEBC9CEA22C01A9D00F72F5D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		AEBC9CEB22C01A9D00F72F5D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		AECF223222A6133C0002C0EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -2574,6 +2629,15 @@
 			buildConfigurations = (
 				AE933D4622A69C0500CD8C59 /* Debug */,
 				AE933D4722A69C0500CD8C59 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AEBC9CE922C01A9D00F72F5D /* Build configuration list for PBXAggregateTarget "Framework_macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AEBC9CEA22C01A9D00F72F5D /* Debug */,
+				AEBC9CEB22C01A9D00F72F5D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
