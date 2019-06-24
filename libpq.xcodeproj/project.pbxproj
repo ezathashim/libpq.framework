@@ -1832,7 +1832,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n\n# Link the \"Current\" version to \"${FRAMEWORK_VERSION}\"\nln -sfh ${FRAMEWORK_VERSION} \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/Current\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/libpq.framework/Headers\"\nln -sfh \"Versions/Current/libpq\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/libpq\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\ncp -a \"${BUILT_PRODUCTS_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n\n# Copy the framework to the Project Directory\nditto \"${BUILT_PRODUCTS_DIR}/libpq.framework\" \"${SRCROOT}/Frameworks/macOS/libpq.framework\"\n";
+			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n\n# Link the \"Current\" version to \"${FRAMEWORK_VERSION}\"\nln -sfh ${FRAMEWORK_VERSION} \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/Current\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/libpq.framework/Headers\"\nln -sfh \"Versions/Current/libpq\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/libpq\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\ncp -a \"${BUILT_PRODUCTS_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n\n";
 		};
 		AE933D3B22A69BAB00CD8C59 /* Prepare Framework */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2457,6 +2457,11 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/libpq-Prefix.pch";
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = (
+					"FRONTEND=1",
+					"UNSAFE_STAT_OK=1",
+					"PG_INT128_TYPE_UNSAFE=1",
+				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_MODULE_NAME = pq;
@@ -2482,6 +2487,11 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "src/libpq-Prefix.pch";
+				"GCC_PREPROCESSOR_DEFINITIONS[arch=*]" = (
+					"FRONTEND=1",
+					"UNSAFE_STAT_OK=1",
+					"PG_INT128_TYPE_UNSAFE=1",
+				);
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = "-ObjC";
 				PRODUCT_MODULE_NAME = pq;

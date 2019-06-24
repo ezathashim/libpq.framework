@@ -733,7 +733,10 @@
 #define PACKAGE_VERSION "10.0"
 
 /* Define to the name of a signed 128-bit integer type. */
-//#define PG_INT128_TYPE __int128
+/* For watchOS this type is unsafe, so added a preprocessor macro PG_INT128_TYPE_UNSAFE=1. */
+#if !defined(PG_INT128_TYPE_UNSAFE)
+#define PG_INT128_TYPE __int128
+#endif
 
 /* Define to the name of a signed 64-bit integer type. */
 #define PG_INT64_TYPE long int
