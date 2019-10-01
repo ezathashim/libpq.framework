@@ -198,6 +198,22 @@
 		4BE9310115057FE60021F063 /* postgres_fe.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930D315057FE60021F063 /* postgres_fe.h */; };
 		4BE9311E15057FE60021F063 /* libpq-Prefix.pch in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930F215057FE60021F063 /* libpq-Prefix.pch */; };
 		4BE9311F15057FE60021F063 /* pg_config_paths.h in Headers */ = {isa = PBXBuildFile; fileRef = 4BE930F415057FE60021F063 /* pg_config_paths.h */; };
+		AE461C6423436CEF006EFE15 /* postgres_ext.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BE930D215057FE60021F063 /* postgres_ext.h */; };
+		AE461C6523436D13006EFE15 /* pg_config_ext.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4B5894F017EF99B90039A02A /* pg_config_ext.h */; };
+		AE461C6623436D45006EFE15 /* libpq-fe.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BBB04E316A91EE500CEE2AE /* libpq-fe.h */; };
+		AE461C6723436D5F006EFE15 /* libpq-events.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BBB04E216A91EE500CEE2AE /* libpq-events.h */; };
+		AE461C6A23436FFA006EFE15 /* pg_config_ext.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4B5894F017EF99B90039A02A /* pg_config_ext.h */; };
+		AE461C6B23437030006EFE15 /* postgres_ext.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BE930D215057FE60021F063 /* postgres_ext.h */; };
+		AE461C6C23437067006EFE15 /* libpq-events.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BBB04E216A91EE500CEE2AE /* libpq-events.h */; };
+		AE461C6D23437067006EFE15 /* libpq-fe.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BBB04E316A91EE500CEE2AE /* libpq-fe.h */; };
+		AE461C6E23437076006EFE15 /* pg_config_ext.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4B5894F017EF99B90039A02A /* pg_config_ext.h */; };
+		AE461C6F23437076006EFE15 /* postgres_ext.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BE930D215057FE60021F063 /* postgres_ext.h */; };
+		AE461C7023437076006EFE15 /* libpq-events.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BBB04E216A91EE500CEE2AE /* libpq-events.h */; };
+		AE461C7123437076006EFE15 /* libpq-fe.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BBB04E316A91EE500CEE2AE /* libpq-fe.h */; };
+		AE461C7323437089006EFE15 /* pg_config_ext.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4B5894F017EF99B90039A02A /* pg_config_ext.h */; };
+		AE461C7423437089006EFE15 /* postgres_ext.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BE930D215057FE60021F063 /* postgres_ext.h */; };
+		AE461C7523437089006EFE15 /* libpq-events.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BBB04E216A91EE500CEE2AE /* libpq-events.h */; };
+		AE461C7623437089006EFE15 /* libpq-fe.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 4BBB04E316A91EE500CEE2AE /* libpq-fe.h */; };
 		AE933C1622A6975100CD8C59 /* openssl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AECF219722A5EFA60002C0EB /* openssl.framework */; };
 		AE933C1922A69B2100CD8C59 /* pgstrcasecmp.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709A21FA624BF006B591F /* pgstrcasecmp.c */; };
 		AE933C1A22A69B2100CD8C59 /* thread.c in Sources */ = {isa = PBXBuildFile; fileRef = 4BC709A01FA624BF006B591F /* thread.c */; };
@@ -659,6 +675,61 @@
 			remoteInfo = libpq_macOS;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		AE461C6323436C51006EFE15 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				AE461C6423436CEF006EFE15 /* postgres_ext.h in CopyFiles */,
+				AE461C6523436D13006EFE15 /* pg_config_ext.h in CopyFiles */,
+				AE461C6623436D45006EFE15 /* libpq-fe.h in CopyFiles */,
+				AE461C6723436D5F006EFE15 /* libpq-events.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE461C6823436F8D006EFE15 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				AE461C6E23437076006EFE15 /* pg_config_ext.h in CopyFiles */,
+				AE461C6F23437076006EFE15 /* postgres_ext.h in CopyFiles */,
+				AE461C7023437076006EFE15 /* libpq-events.h in CopyFiles */,
+				AE461C7123437076006EFE15 /* libpq-fe.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE461C6923436F9B006EFE15 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				AE461C6A23436FFA006EFE15 /* pg_config_ext.h in CopyFiles */,
+				AE461C6B23437030006EFE15 /* postgres_ext.h in CopyFiles */,
+				AE461C6C23437067006EFE15 /* libpq-events.h in CopyFiles */,
+				AE461C6D23437067006EFE15 /* libpq-fe.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE461C7223437084006EFE15 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				AE461C7323437089006EFE15 /* pg_config_ext.h in CopyFiles */,
+				AE461C7423437089006EFE15 /* postgres_ext.h in CopyFiles */,
+				AE461C7523437089006EFE15 /* libpq-events.h in CopyFiles */,
+				AE461C7623437089006EFE15 /* libpq-fe.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		4B4C4CB115040B7500840750 /* libpq.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libpq.a; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1446,10 +1517,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE933CD522A69BAB00CD8C59 /* pg_config_ext.h in Headers */,
 				AE933CD222A69BAB00CD8C59 /* postgres_ext.h in Headers */,
 				AE933CD322A69BAB00CD8C59 /* libpq-events.h in Headers */,
 				AE933CD422A69BAB00CD8C59 /* libpq-fe.h in Headers */,
-				AE933CD522A69BAB00CD8C59 /* pg_config_ext.h in Headers */,
 				AE933CD622A69BAB00CD8C59 /* c.h in Headers */,
 				AE933CD722A69BAB00CD8C59 /* getaddrinfo.h in Headers */,
 				AE933CD822A69BAB00CD8C59 /* libpq-fs.h in Headers */,
@@ -1676,6 +1747,7 @@
 				4B4C4CAD15040B7500840750 /* Sources */,
 				4B4C4CAE15040B7500840750 /* Frameworks */,
 				4B4C4CAF15040B7500840750 /* Headers */,
+				AE461C6323436C51006EFE15 /* CopyFiles */,
 				4B4C4CDD150423AA00840750 /* Prepare Framework */,
 			);
 			buildRules = (
@@ -1712,6 +1784,7 @@
 				AE933C1822A69B2100CD8C59 /* Sources */,
 				AE933C3922A69B2100CD8C59 /* Frameworks */,
 				AE933C3C22A69B2100CD8C59 /* Headers */,
+				AE461C7223437084006EFE15 /* CopyFiles */,
 				AE933CA622A69B2100CD8C59 /* Prepare Framework */,
 			);
 			buildRules = (
@@ -1730,6 +1803,7 @@
 				AE933CAD22A69BAB00CD8C59 /* Sources */,
 				AE933CCE22A69BAB00CD8C59 /* Frameworks */,
 				AE933CD122A69BAB00CD8C59 /* Headers */,
+				AE461C6923436F9B006EFE15 /* CopyFiles */,
 				AE933D3B22A69BAB00CD8C59 /* Prepare Framework */,
 			);
 			buildRules = (
@@ -1748,6 +1822,7 @@
 				AECF21A222A6133C0002C0EB /* Sources */,
 				AECF21C322A6133C0002C0EB /* Frameworks */,
 				AECF21C622A6133C0002C0EB /* Headers */,
+				AE461C6823436F8D006EFE15 /* CopyFiles */,
 				AECF223022A6133C0002C0EB /* Prepare Framework */,
 			);
 			buildRules = (
@@ -1824,7 +1899,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n\n# Link the \"Current\" version to \"${FRAMEWORK_VERSION}\"\nln -sfh ${FRAMEWORK_VERSION} \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/Current\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/libpq.framework/Headers\"\nln -sfh \"Versions/Current/libpq\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/libpq\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\ncp -a \"${BUILT_PRODUCTS_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n";
+			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n\n# Link the \"Current\" version to \"${FRAMEWORK_VERSION}\"\nln -sfh ${FRAMEWORK_VERSION} \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/Current\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/libpq.framework/Headers\"\nln -sfh \"Versions/Current/libpq\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/libpq\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\ncp -a \"${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}/\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n";
 		};
 		4B4C4CE4150423FF00840750 /* Build Framework */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1852,7 +1927,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n\n# Link the \"Current\" version to \"${FRAMEWORK_VERSION}\"\nln -sfh ${FRAMEWORK_VERSION} \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/Current\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/libpq.framework/Headers\"\nln -sfh \"Versions/Current/libpq\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/libpq\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\ncp -a \"${BUILT_PRODUCTS_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n";
+			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n\n# Link the \"Current\" version to \"${FRAMEWORK_VERSION}\"\nln -sfh ${FRAMEWORK_VERSION} \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/Current\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/libpq.framework/Headers\"\nln -sfh \"Versions/Current/libpq\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/libpq\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\ncp -a \"${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}/\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n";
 		};
 		AE933D3B22A69BAB00CD8C59 /* Prepare Framework */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1866,7 +1941,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n\n# Link the \"Current\" version to \"${FRAMEWORK_VERSION}\"\nln -sfh ${FRAMEWORK_VERSION} \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/Current\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/libpq.framework/Headers\"\nln -sfh \"Versions/Current/libpq\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/libpq\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\ncp -a \"${BUILT_PRODUCTS_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n";
+			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n\n# Link the \"Current\" version to \"${FRAMEWORK_VERSION}\"\nln -sfh ${FRAMEWORK_VERSION} \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/Current\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/libpq.framework/Headers\"\nln -sfh \"Versions/Current/libpq\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/libpq\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\ncp -a \"${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}/\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n";
 		};
 		AE933D4422A69C0500CD8C59 /* Build Framework */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -1894,7 +1969,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n\n# Link the \"Current\" version to \"${FRAMEWORK_VERSION}\"\nln -sfh ${FRAMEWORK_VERSION} \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/Current\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/libpq.framework/Headers\"\nln -sfh \"Versions/Current/libpq\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/libpq\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\ncp -a \"${BUILT_PRODUCTS_DIR}/${PUBLIC_HEADERS_FOLDER_PATH}/\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n";
+			shellScript = "set -e\n\nmkdir -p \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n\n# Link the \"Current\" version to \"${FRAMEWORK_VERSION}\"\nln -sfh ${FRAMEWORK_VERSION} \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/Current\"\nln -sfh Versions/Current/Headers \"${BUILT_PRODUCTS_DIR}/libpq.framework/Headers\"\nln -sfh \"Versions/Current/libpq\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/libpq\"\n\n# The -a ensures that the headers maintain the source modification date so that we don't constantly\n# cause propagating rebuilds of files that import these headers.\ncp -a \"${BUILT_PRODUCTS_DIR}/include/${PRODUCT_NAME}/\" \"${BUILT_PRODUCTS_DIR}/libpq.framework/Versions/${FRAMEWORK_VERSION}/Headers\"\n";
 		};
 		AECF223822A613500002C0EB /* Build Framework */ = {
 			isa = PBXShellScriptBuildPhase;
